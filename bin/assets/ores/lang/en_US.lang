@@ -1,0 +1,50 @@
+itemGroup.ores=Ores
+
+fossils.name=Fossils Ore
+sodium.name=Saltpeter Ore
+sulfur.name=Sulfur Ore
+tile.flax.name=Flax
+
+seed.name=Flax Seed
+sodium.name=Saltpeter
+sulfur.name=Sulfur
+handel.name=Handel
+dust_sodium.name=Saltpeter Dust
+dust_sulfur.name=Sulfur Dust
+dust_charcoal.name=Charcoal Dust
+chunk_iron.name=Iron Chunk
+chunk_gold.name=Gold Chunk
+chunk_tin.name=Tin Chunk
+chunk_copper.name=Copper Chunk
+chunk_silver.name=Silver Chunk
+chunk_lead.name=Lead Chunk
+chunk_nickel.name=Nickel Chunk
+chunk_platinum.name=Platinum Chunk
+chunk_aluminum.name=Aluminum Chunk
+ingot_tin.name=Tin Ingot
+ingot_copper.name=Copper Ingot
+ingot_silver.name=Silver Ingot
+ingot_lead.name=Lead Ingot
+ingot_nickel.name=Nickel Ingot
+ingot_platinum.name=Platinum Ingot
+ingot_aluminum.name=Aluminum Ingot
+
+item.mortarandpestle.name=Mortar and Pestle
+
+item.chisel_wood.name=wood chisel
+item.chisel_stone.name=stone chisel
+item.chisel_iron.name=iron chisel
+item.chisel_gold.name=gold chisel
+item.chisel_diamond.name=diamond chisel
+
+item.machete_wood.name=wood machete
+item.machete_stone.name=stone machete
+item.machete_iron.name=iron machete
+item.machete_gold.name=gold machete
+item.machete_diamond.name=diamond machete
+
+item.sickle_wood.name=wood sickle
+item.sickle_stone.name=stone sickle
+item.sickle_iron.name=iron sickle
+item.sickle_gold.name=gold sickle
+item.sickle_diamond.name=diamond sickle

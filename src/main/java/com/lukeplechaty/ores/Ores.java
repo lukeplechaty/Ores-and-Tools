@@ -1,4 +1,10 @@
 package com.lukeplechaty.ores;
+import com.lukeplechaty.ores.blocks.*;
+import com.lukeplechaty.ores.control.*;
+import com.lukeplechaty.ores.items.*;
+import com.lukeplechaty.ores.recipe.*;
+import com.lukeplechaty.ores.register.OresRegister;
+import com.lukeplechaty.ores.render.*;
 import net.minecraft.block.*;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.*;
@@ -13,30 +19,33 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class Ores
 {
 	GenOre genore = new GenOre();
-    static final CreativeTabs tabOres = new CreativeTabOres();
+    public static final CreativeTabs tabOres = new CreativeTabOres();
     static String[] MT=new String[]{"wood","stone","iron","gold","diamond"};
 	static int[] DG=new int[5];
-	static boolean genores;
-	static boolean debug;
-	static Block ore;
-	static Block crop;
-	static Item items;
-	static Item chiselwood;
-	static Item chiselstone;
-	static Item chiseliron;
-	static Item chiselgold;
-	static Item chiseldiamond;
-	static Item sicklewood;
-	static Item sicklestone;
-	static Item sickleiron;
-	static Item sicklegold;
-	static Item sicklediamond;
-	static Item machetewood;
-	static Item machetestone;
-	static Item macheteiron;
-	static Item machetegold;
-	static Item machetediamond;
-	static Item mortarandpestle;
+	public static boolean genores;
+	public static boolean debug;
+	public static Block ore;
+	public static Block crop;
+	public static Item items;
+	public static Item chunks;
+	public static Item ingots;
+	public static Item dusts;
+	public static Item chiselwood;
+	public static Item chiselstone;
+	public static Item chiseliron;
+	public static Item chiselgold;
+	public static Item chiseldiamond;
+	public static Item sicklewood;
+	public static Item sicklestone;
+	public static Item sickleiron;
+	public static Item sicklegold;
+	public static Item sicklediamond;
+	public static Item machetewood;
+	public static Item machetestone;
+	public static Item macheteiron;
+	public static Item machetegold;
+	public static Item machetediamond;
+	public static Item mortarandpestle;
 	@EventHandler
 	public void PreLoad(FMLPreInitializationEvent event)
 	{
@@ -60,8 +69,11 @@ public class Ores
 	{
 		if(Ores.debug)System.out.println("loading blocks and items");
 		ore=(new Blockore());
-		crop=(new Blockcrop());
+		crop=(new BlockFlax());
 		items=(new Itemore());
+		chunks=(new ItemChunk());
+		ingots=(new ItemIngot());
+		dusts=(new ItemDust());
 		
 		chiselwood=(new ItemChisl(MT[0],DG[0],1));
 		chiselstone=(new ItemChisl(MT[1],DG[1],2));

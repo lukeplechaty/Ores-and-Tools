@@ -99,6 +99,9 @@ public class Ores
 		GameRegistry.registerBlock(ore,Itemblockore.class,"ores_block");
 		GameRegistry.registerBlock(crop,"flax_crop");
 		GameRegistry.registerItem(items,"ores_items");
+		GameRegistry.registerItem(chunks,"ores_chunks");
+		GameRegistry.registerItem(ingots,"ores_ingots");
+		GameRegistry.registerItem(dusts,"ores_dusts");
 		
 		GameRegistry.registerItem(chiselwood,"chisel_wood");
 		GameRegistry.registerItem(chiselstone,"chisel_stone");

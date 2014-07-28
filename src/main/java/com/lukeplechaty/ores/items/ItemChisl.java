@@ -78,7 +78,7 @@ public class ItemChisl extends Item
 				Object[] list=(Object[])worklist0.get(id);
 				if(OresControl.getOre((ItemStack)list[0],x,y,z,world))
 				{
-					get(itemstack,entityplayer,world,x,y,z,side,(ItemStack)list[1],(ItemStack)list[2],((Integer)list[3]).intValue());
+					return get(itemstack,entityplayer,world,x,y,z,side,(ItemStack)list[1],(ItemStack)list[2],((Integer)list[3]).intValue());
 				}
 			}
 			for(int id=0;id<worklist1.size();id++)
@@ -86,7 +86,7 @@ public class ItemChisl extends Item
 				Object[] list=(Object[])worklist1.get(id);
 				if(OresControl.getOre((String)list[0],x,y,z,world))
 				{
-					get(itemstack,entityplayer,world,x,y,z,side,OresControl.getOre((String)list[1]),(ItemStack)list[2],((Integer)list[3]).intValue());
+					return get(itemstack,entityplayer,world,x,y,z,side,OresControl.getOre((String)list[1]),(ItemStack)list[2],((Integer)list[3]).intValue());
 				}
 			}
 			for(int id=0;id<worklist2.size();id++)
@@ -94,7 +94,7 @@ public class ItemChisl extends Item
 				Object[] list=(Object[])worklist2.get(id);
 				if(OresControl.getOre((ItemStack)list[0],x,y,z,world))
 				{
-					get(itemstack,entityplayer,world,x,y,z,side,OresControl.getOre((String)list[1]),(ItemStack)list[2],((Integer)list[3]).intValue());
+					return get(itemstack,entityplayer,world,x,y,z,side,OresControl.getOre((String)list[1]),(ItemStack)list[2],((Integer)list[3]).intValue());
 				}
 			}
 			for(int id=0;id<worklist3.size();id++)
@@ -102,7 +102,7 @@ public class ItemChisl extends Item
 				Object[] list=(Object[])worklist3.get(id);
 				if(OresControl.getOre((String)list[0],x,y,z,world))
 				{
-					get(itemstack,entityplayer,world,x,y,z,side,(ItemStack)list[1],(ItemStack)list[2],((Integer)list[3]).intValue());
+					return get(itemstack,entityplayer,world,x,y,z,side,(ItemStack)list[1],(ItemStack)list[2],((Integer)list[3]).intValue());
 				}
 			}
 		}

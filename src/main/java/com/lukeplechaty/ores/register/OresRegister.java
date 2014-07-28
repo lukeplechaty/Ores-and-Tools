@@ -1,6 +1,7 @@
 package com.lukeplechaty.ores.register;
 import com.lukeplechaty.ores.Ores;
 import com.lukeplechaty.ores.control.OresControl;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 public class OresRegister
 {

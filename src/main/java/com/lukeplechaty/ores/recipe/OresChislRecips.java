@@ -7,8 +7,6 @@ import net.minecraft.init.Items;
 import net.minecraft.item.*;
 public class OresChislRecips
 {
-	static Block block;
-	static Item item;
 	static Block cobble=Blocks.cobblestone;
 	public static void recipe()
 	{

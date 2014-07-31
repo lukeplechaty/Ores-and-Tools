@@ -1,8 +1,7 @@
 package com.lukeplechaty.ores.control;
 import java.util.ArrayList;
 import java.util.List;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 /**
  * ChislHandler let you add recipe the the Chisl.
@@ -17,9 +16,9 @@ public class ChislHandler
      * A int in and int out sensitive version of adding a chisl recipe.
      * @param
      */
-	public static void addtolist(ItemStack in,ItemStack out,ItemStack left,int toollevel)
+	public static void addtolist(Block in,int meta,ItemStack out,ItemStack left,int toollevel)
 	{
-		Object list=new Object[]{in,out,left,toollevel};
+		Object list=new Object[]{in,meta,out,left,toollevel};
 		worklist0.add(list);
 	}
     /**
@@ -35,9 +34,9 @@ public class ChislHandler
      * A int in and string out sensitive version of adding a chisl recipe.
      * @param
      */
-	public static void addtolist(ItemStack in,String out,ItemStack left,int toollevel)
+	public static void addtolist(Block in,int meta,String out,ItemStack left,int toollevel)
 	{
-		Object list=new Object[]{in,out,left,toollevel};
+		Object list=new Object[]{in,meta,out,left,toollevel};
 		worklist2.add(list);
 	}
     /**

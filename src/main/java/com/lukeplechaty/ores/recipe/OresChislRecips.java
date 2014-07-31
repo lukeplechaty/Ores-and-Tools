@@ -38,18 +38,19 @@ public class OresChislRecips
 			ChislHandler.addtolist("oreSapphire","gemSapphire",new ItemStack(cobble),2);
 			ChislHandler.addtolist("oreRuby","gemRuby",new ItemStack(cobble),2);
 			ChislHandler.addtolist("orePeridot","gemPeridot",new ItemStack(cobble),2);
-			
-			ChislHandler.addtolist(new ItemStack(Blocks.brick_block),new ItemStack(Items.brick,4),new ItemStack(Blocks.air),3);
-			ChislHandler.addtolist(new ItemStack(Blocks.ice),new ItemStack(Blocks.ice),new ItemStack(Blocks.air),3);
-			ChislHandler.addtolist(new ItemStack(Blocks.glass),new ItemStack(Blocks.glass),new ItemStack(Blocks.air),1);
-			ChislHandler.addtolist(new ItemStack(Blocks.glass_pane),new ItemStack(Blocks.glass_pane),new ItemStack(Blocks.air),1);
+
+			ChislHandler.addtolist(Blocks.lit_redstone_ore,0,new ItemStack(Items.redstone,5,0),new ItemStack(cobble),3);
+			ChislHandler.addtolist(Blocks.brick_block,0,new ItemStack(Items.brick,4),new ItemStack(Blocks.air),3);
+			ChislHandler.addtolist(Blocks.nether_brick,0,new ItemStack(Items.netherbrick,4),new ItemStack(Blocks.air),3);
+			ChislHandler.addtolist(Blocks.ice,0,new ItemStack(Blocks.ice),new ItemStack(Blocks.air),3);
+			ChislHandler.addtolist(Blocks.glass,0,new ItemStack(Blocks.glass),new ItemStack(Blocks.air),1);
+			ChislHandler.addtolist(Blocks.glass_pane,0,new ItemStack(Blocks.glass_pane),new ItemStack(Blocks.air),1);
 			for(int a=-1;a<16;a++)
 			{
-				ChislHandler.addtolist(new ItemStack(Blocks.stained_glass,1,a),new ItemStack(Blocks.stained_glass,1,a),new ItemStack(Blocks.air,0),1);
-				ChislHandler.addtolist(new ItemStack(Blocks.stained_glass_pane,1,a),new ItemStack(Blocks.stained_glass_pane,1,a),new ItemStack(Blocks.air,0),1);
+				ChislHandler.addtolist(Blocks.stained_glass,a,new ItemStack(Blocks.stained_glass,1,a),new ItemStack(Blocks.air,0),1);
+				ChislHandler.addtolist(Blocks.stained_glass_pane,a,new ItemStack(Blocks.stained_glass_pane,1,a),new ItemStack(Blocks.air,0),1);
 			}
-		}
-		catch(Exception e){System.out.println("Chisl recipe not working: "+e);}
+		}catch(Exception e){System.out.println("Chisl recipe not working: "+e);}
 		if(Ores.debug)System.out.println("chisl recipe added");
 	}
 }

@@ -7,12 +7,12 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.item.*;
 import net.minecraft.entity.player.*;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.*;
 import net.minecraft.world.*;
-import net.minecraftforge.common.*;
-public class ItemChisl extends Item
+public class ItemChisel extends Item
 {
-	public ItemChisl(String name,int damage,int level)
+	public ItemChisel(String name,int damage,int level)
 	{
 		super();
 		if(Ores.debug)System.out.println("adding chisel "+name);
@@ -30,7 +30,7 @@ public class ItemChisl extends Item
 	private static List<Object> worklist3;
 	public static void loadlist()
 	{
-		if(Ores.debug)System.out.println("loading chisl list");
+		if(Ores.debug)System.out.println("loading chisel list");
 		worklist0=ChislHandler.getlist0();
 		worklist1=ChislHandler.getlist1();
 		worklist2=ChislHandler.getlist2();
@@ -76,9 +76,9 @@ public class ItemChisl extends Item
 			for(int id=0;id<worklist0.size();id++)
 			{
 				Object[] list=(Object[])worklist0.get(id);
-				if(OresControl.getOre((ItemStack)list[0],x,y,z,world))
+				if(OresControl.getOre((Block)list[0],(int)list[1],x,y,z,world))
 				{
-					return get(itemstack,entityplayer,world,x,y,z,side,(ItemStack)list[1],(ItemStack)list[2],((Integer)list[3]).intValue());
+					return get(itemstack,entityplayer,world,x,y,z,side,(ItemStack)list[2],(ItemStack)list[3],((Integer)list[4]).intValue());
 				}
 			}
 			for(int id=0;id<worklist1.size();id++)
@@ -92,9 +92,9 @@ public class ItemChisl extends Item
 			for(int id=0;id<worklist2.size();id++)
 			{
 				Object[] list=(Object[])worklist2.get(id);
-				if(OresControl.getOre((ItemStack)list[0],x,y,z,world))
+				if(OresControl.getOre((Block)list[0],(int)list[1],x,y,z,world))
 				{
-					return get(itemstack,entityplayer,world,x,y,z,side,OresControl.getOre((String)list[1]),(ItemStack)list[2],((Integer)list[3]).intValue());
+					return get(itemstack,entityplayer,world,x,y,z,side,OresControl.getOre((String)list[2]),(ItemStack)list[3],((Integer)list[4]).intValue());
 				}
 			}
 			for(int id=0;id<worklist3.size();id++)
@@ -106,7 +106,7 @@ public class ItemChisl extends Item
 				}
 			}
 		}
-		catch(Exception e){System.out.println("Chisl not working: "+e);}
+		catch(Exception e){System.out.println("Chisel not working: "+e);}
 		return false;
 	}
 	public boolean onItemUse(ItemStack itemstack,EntityPlayer EntityPlayer,World world,int x,int y,int z,int side,float i,float j,float k)

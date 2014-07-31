@@ -46,10 +46,6 @@ public class Blockore extends Block
 	{
 		return textures[meta];
 	}
-	public static IIcon GetIconOverlay(int meta)
-	{
-		return textures[meta];
-	}
 	public int getExpDrop(World world, int data, int enchantmentLevel)
     {
         return MathHelper.getRandomIntegerInRange(world.rand, 2, 5);

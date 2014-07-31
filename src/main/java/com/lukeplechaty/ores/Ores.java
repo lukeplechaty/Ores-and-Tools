@@ -7,6 +7,7 @@ import com.lukeplechaty.ores.register.OresRegister;
 import com.lukeplechaty.ores.render.*;
 import net.minecraft.block.*;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.*;
 import net.minecraftforge.common.*;
 import net.minecraftforge.common.config.Configuration;
@@ -75,11 +76,11 @@ public class Ores
 		ingots=(new ItemIngot());
 		dusts=(new ItemDust());
 		
-		chiselwood=(new ItemChisl(MT[0],DG[0],1));
-		chiselstone=(new ItemChisl(MT[1],DG[1],2));
-		chiseliron=(new ItemChisl(MT[2],DG[2],3));
-		chiselgold=(new ItemChisl(MT[3],DG[3],1));
-		chiseldiamond=(new ItemChisl(MT[4],DG[4],4));
+		chiselwood=(new ItemChisel(MT[0],DG[0],1));
+		chiselstone=(new ItemChisel(MT[1],DG[1],2));
+		chiseliron=(new ItemChisel(MT[2],DG[2],3));
+		chiselgold=(new ItemChisel(MT[3],DG[3],1));
+		chiseldiamond=(new ItemChisel(MT[4],DG[4],4));
 		
 		sicklewood=(new ItemSickle(MT[0],DG[0]));
 		sicklestone=(new ItemSickle(MT[1],DG[1]));
@@ -129,7 +130,7 @@ public class Ores
 		GameRegistry.registerWorldGenerator(genore,0);
 		OresChislRecips.recipe();
 		OresBlockRender.setCustomRenderers();
-		ItemChisl.loadlist();
+		ItemChisel.loadlist();
 	}
 	@EventHandler
 	public void Postload(FMLPostInitializationEvent event){}

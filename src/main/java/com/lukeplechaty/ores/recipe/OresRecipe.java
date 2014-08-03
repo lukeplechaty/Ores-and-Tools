@@ -24,14 +24,23 @@ public class OresRecipe
 		try
 		{
 			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,0),new ItemStack(Items.iron_ingot,1,0),0.7f);	//iron
+			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,3),new ItemStack(Items.iron_ingot,1,0),0.7f);
 			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,1),new ItemStack(Items.gold_ingot,1,0),1.0f);	//gold
+			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,4),new ItemStack(Items.gold_ingot,1,0),1.0f);
 			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,2),new ItemStack(Ores.ingots,1,0),0.55f);		//tin
-			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,3),new ItemStack(Ores.ingots,1,1),0.4f);			//copper
+			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,5),new ItemStack(Ores.ingots,1,0),0.55f);
+			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,3),new ItemStack(Ores.ingots,1,1),0.4f);		//copper
+			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,6),new ItemStack(Ores.ingots,1,1),0.4f);
 			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,4),new ItemStack(Ores.ingots,1,2),0.85f);		//silver
+			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,7),new ItemStack(Ores.ingots,1,2),0.85f);
 			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,5),new ItemStack(Ores.ingots,1,3),0.85f);		//lead
+			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,8),new ItemStack(Ores.ingots,1,3),0.85f);
 			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,6),new ItemStack(Ores.ingots,1,4),0.85f);		//nickel
+			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,9),new ItemStack(Ores.ingots,1,4),0.85f);
 			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,7),new ItemStack(Ores.ingots,1,5),0.85f);		//platinum
+			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,10),new ItemStack(Ores.ingots,1,5),0.85f);
 			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,8),new ItemStack(Ores.ingots,1,6),0.85f);		//aluminum
+			FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,11),new ItemStack(Ores.ingots,1,6),0.85f);
 		}
 		catch(Exception e)
 		{

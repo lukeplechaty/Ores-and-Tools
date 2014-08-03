@@ -76,7 +76,7 @@ public class ItemChisel extends Item
 			for(int id=0;id<worklist0.size();id++)
 			{
 				Object[] list=(Object[])worklist0.get(id);
-				if(OresControl.getOre((Block)list[0],(int)list[1],x,y,z,world))
+				if(OresControl.getOre((Block)list[0],(Integer)list[1],x,y,z,world))
 				{
 					return get(itemstack,entityplayer,world,x,y,z,side,(ItemStack)list[2],(ItemStack)list[3],((Integer)list[4]).intValue());
 				}
@@ -92,7 +92,7 @@ public class ItemChisel extends Item
 			for(int id=0;id<worklist2.size();id++)
 			{
 				Object[] list=(Object[])worklist2.get(id);
-				if(OresControl.getOre((Block)list[0],(int)list[1],x,y,z,world))
+				if(OresControl.getOre((Block)list[0],(Integer)list[1],x,y,z,world))
 				{
 					return get(itemstack,entityplayer,world,x,y,z,side,OresControl.getOre((String)list[2]),(ItemStack)list[3],((Integer)list[4]).intValue());
 				}

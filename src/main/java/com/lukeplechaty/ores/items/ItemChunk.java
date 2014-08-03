@@ -1,7 +1,7 @@
 package com.lukeplechaty.ores.items;
 import java.util.List;
-import com.lukeplechaty.ores.EntityOres;
 import com.lukeplechaty.ores.Ores;
+import com.lukeplechaty.ores.entity.EntityChunk;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -12,7 +12,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 public class ItemChunk extends Item
 {
-    private String[] names=new String[]{"chunk_iron","chunk_gold","chunk_tin","chunk_copper","chunk_silver","chunk_lead","chunk_nickel","chunk_platinum","chunk_aluminum",};
+    private String[] names=new String[]{"chunk_iron","chunk_gold","chunk_tin","chunk_copper","chunk_silver","chunk_lead","chunk_nickel","chunk_platinum","chunk_aluminum"};
 	private IIcon[] textures=new IIcon[names.length];
 	public ItemChunk()
 	{
@@ -30,7 +30,7 @@ public class ItemChunk extends Item
 	}
 	public Entity createEntity(World world,Entity entity,ItemStack itemstack)
 	{
-		return new EntityOres(world,(EntityItem)entity,itemstack);
+		return new EntityChunk(world,(EntityItem)entity,itemstack);
 	}
 	
 	public void getSubItems(Item i, CreativeTabs c, List l)

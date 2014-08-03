@@ -13,7 +13,7 @@ public class ChislHandler
 	private static List<Object> worklist2= new ArrayList<Object>();
 	private static List<Object> worklist3= new ArrayList<Object>();
     /**
-     * A int in and int out sensitive version of adding a chisl recipe.
+     * A block in and itemstack out sensitive version of adding a chisl recipe.
      * @param
      */
 	public static void addtolist(Block in,int meta,ItemStack out,ItemStack left,int toollevel)
@@ -31,7 +31,7 @@ public class ChislHandler
 		worklist1.add(list);
 	}
     /**
-     * A int in and string out sensitive version of adding a chisl recipe.
+     * A block in and string out sensitive version of adding a chisl recipe.
      * @param
      */
 	public static void addtolist(Block in,int meta,String out,ItemStack left,int toollevel)
@@ -40,7 +40,7 @@ public class ChislHandler
 		worklist2.add(list);
 	}
     /**
-     * A string in and int out sensitive version of adding a chisl recipe.
+     * A string in and itemstack out sensitive version of adding a chisl recipe.
      * @param
      */
 	public static void addtolist(String in,ItemStack out,ItemStack left,int toollevel)

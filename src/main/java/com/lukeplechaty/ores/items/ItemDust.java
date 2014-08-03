@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 public class ItemDust extends Item
 {
-    private String[] names=new String[]{"dust_sodium","dust_sulfur","dust_charcoal"};
+    private String[] names=new String[]{"dust_sodium","dust_sulfur","dust_charcoal","dust_iron","dust_gold","dust_tin","dust_copper","dust_silver","dust_lead","dust_nickel","dust_platinum","dust_aluminum"};
 	private IIcon[] textures=new IIcon[names.length];
 	public ItemDust()
 	{

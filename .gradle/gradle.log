@@ -7,14 +7,6 @@ The assetDir is deprecated!  Use runDir instead! runDir set to assets/..The asse
  R4wk, ZeuX, IngisKahn      
  MCP Data version : unknown
 ****************************
-:downloadClient SKIPPED
-:downloadServer SKIPPED
-:extractUserDev UP-TO-DATE
-:mergeJars SKIPPED
-:applyBinPatches SKIPPED
-:downloadMcpTools UP-TO-DATE
-:genSrgs SKIPPED
-:deobfBinJar SKIPPED
 :compileApiJava UP-TO-DATE
 :processApiResources UP-TO-DATE
 :apiClasses UP-TO-DATE
@@ -27,6 +19,7 @@ Note: Recompile with -Xlint:unchecked for details.
 :processResources
 :classes
 :jar
+:extractUserDev UP-TO-DATE
 :getAssetsIndex
 :getAssets
 :makeStart SKIPPED
@@ -34,6 +27,7 @@ Note: Recompile with -Xlint:unchecked for details.
 :processTestResources UP-TO-DATE
 :testClasses UP-TO-DATE
 :test UP-TO-DATE
+:genSrgs SKIPPED
 :reobf
 :assemble
 :check UP-TO-DATE
@@ -41,4 +35,4 @@ Note: Recompile with -Xlint:unchecked for details.
 
 BUILD SUCCESSFUL
 
-Total time: 30.673 secs
+Total time: 26.5 secs

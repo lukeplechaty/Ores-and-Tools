@@ -9,9 +9,20 @@ seed.name=Flax Seed
 sodium.name=Saltpeter
 sulfur.name=Sulfur
 handel.name=Handel
+
 dust_sodium.name=Saltpeter Dust
 dust_sulfur.name=Sulfur Dust
 dust_charcoal.name=Charcoal Dust
+dust_iron.name=Iron Dust
+dust_gold.name=Gold Dust
+dust_tin.name=Tin Dust
+dust_copper.name=Copper Dust
+dust_silver.name=Silver Dust
+dust_lead.name=Lead Dust
+dust_nickel.name=Nickel Dust
+dust_platinum.name=Platinum Dust
+dust_aluminum.name=Aluminum Dust
+
 chunk_iron.name=Iron Chunk
 chunk_gold.name=Gold Chunk
 chunk_tin.name=Tin Chunk
@@ -21,6 +32,7 @@ chunk_lead.name=Lead Chunk
 chunk_nickel.name=Nickel Chunk
 chunk_platinum.name=Platinum Chunk
 chunk_aluminum.name=Aluminum Chunk
+
 ingot_tin.name=Tin Ingot
 ingot_copper.name=Copper Ingot
 ingot_silver.name=Silver Ingot

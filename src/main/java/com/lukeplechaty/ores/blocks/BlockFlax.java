@@ -4,6 +4,7 @@ import java.util.Random;
 import com.lukeplechaty.ores.Ores;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.*;
@@ -17,6 +18,7 @@ public class BlockFlax extends BlockBush implements IGrowable
 		super();
 		if(Ores.debug)System.out.println("adding crop");
         this.setStepSound(soundTypeGrass);
+        setCreativeTab((CreativeTabs)null);
         setBlockName("flax");
 		setTickRandomly(true);
 		setBlockBounds(0.0F,0.0F,0.0F,1.0F,0.25F,1.0F);

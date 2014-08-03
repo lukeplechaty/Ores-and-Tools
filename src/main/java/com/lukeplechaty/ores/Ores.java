@@ -16,7 +16,7 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.registry.GameRegistry;
-@Mod(modid="ores",name="Ores",version="1.7.10-0.2.0")
+@Mod(modid="ores",name="Ores",version="1.7.10-0.3.0")
 public class Ores
 {
 	GenOre genore = new GenOre();

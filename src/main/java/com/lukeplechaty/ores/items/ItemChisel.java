@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.item.*;
 import net.minecraft.entity.player.*;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.*;
 import net.minecraft.world.*;
 public class ItemChisel extends Item

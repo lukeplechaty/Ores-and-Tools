@@ -41,8 +41,8 @@ public class EntityChunk extends EntityItem
 			int size=this.getEntityItem().stackSize;
 			int meta=this.getEntityItem().getItemDamage();
 			this.setDead();
-			EntityItem test=new EntityItem(this.worldObj,this.posX,this.posY,this.posZ,new ItemStack(Ores.dusts,size*2,meta+3));
-			this.worldObj.spawnEntityInWorld(test);
+			EntityItem dust=new EntityItem(this.worldObj,this.posX,this.posY,this.posZ,new ItemStack(Ores.dusts,size*2,meta+3));
+			this.worldObj.spawnEntityInWorld(dust);
 		}
 		super.onUpdate();
 	}

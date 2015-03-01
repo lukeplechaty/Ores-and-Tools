@@ -27,7 +27,7 @@ public class Blockore extends Block
 	}
 	public boolean isOpaqueCube()
 	{
-		return false;
+		return true;
 	}
 	public int getRenderType()
 	{

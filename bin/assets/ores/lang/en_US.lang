@@ -22,6 +22,7 @@ dust_lead.name=Lead Dust
 dust_nickel.name=Nickel Dust
 dust_platinum.name=Platinum Dust
 dust_aluminum.name=Aluminum Dust
+dust_mithril.name=Mithril Dust
 
 chunk_iron.name=Iron Chunk
 chunk_gold.name=Gold Chunk
@@ -32,6 +33,7 @@ chunk_lead.name=Lead Chunk
 chunk_nickel.name=Nickel Chunk
 chunk_platinum.name=Platinum Chunk
 chunk_aluminum.name=Aluminum Chunk
+chunk_mithril.name=Mithril Chunk
 
 ingot_tin.name=Tin Ingot
 ingot_copper.name=Copper Ingot
@@ -40,6 +42,7 @@ ingot_lead.name=Lead Ingot
 ingot_nickel.name=Nickel Ingot
 ingot_platinum.name=Platinum Ingot
 ingot_aluminum.name=Aluminum Ingot
+ingot_mithril.name=Mithril Ingot
 
 item.mortarandpestle.name=Mortar and Pestle
 
@@ -48,15 +51,39 @@ item.chisel_stone.name=stone chisel
 item.chisel_iron.name=iron chisel
 item.chisel_gold.name=gold chisel
 item.chisel_diamond.name=diamond chisel
+item.chisel_tin.name=tin chisel
+item.chisel_copper.name=copper chisel
+item.chisel_silver.name=silver chisel
+item.chisel_lead.name=lead chisel
+item.chisel_nickel.name=nickel chisel
+item.chisel_platinum.name=platinum chisel
+item.chisel_aluminum.name=aluminum chisel
+item.chisel_mithril.name=mithril chisel
 
 item.machete_wood.name=wood machete
 item.machete_stone.name=stone machete
 item.machete_iron.name=iron machete
 item.machete_gold.name=gold machete
 item.machete_diamond.name=diamond machete
+item.machete_tin.name=tin machete
+item.machete_copper.name=copper machete
+item.machete_silver.name=silver machete
+item.machete_lead.name=lead machete
+item.machete_nickel.name=nickel machete
+item.machete_platinum.name=platinum machete
+item.machete_aluminum.name=aluminum machete
+item.machete_mithril.name=mithril machete
 
 item.sickle_wood.name=wood sickle
 item.sickle_stone.name=stone sickle
 item.sickle_iron.name=iron sickle
 item.sickle_gold.name=gold sickle
 item.sickle_diamond.name=diamond sickle
+item.sickle_tin.name=tin sickle
+item.sickle_copper.name=copper sickle
+item.sickle_silver.name=silver sickle
+item.sickle_lead.name=lead sickle
+item.sickle_nickel.name=nickel sickle
+item.sickle_platinum.name=platinum sickle
+item.sickle_aluminum.name=aluminum sickle
+item.sickle_mithril.name=mithril sickle

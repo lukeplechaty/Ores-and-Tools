@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 public class ItemIngot extends Item
 {
-    private String[] names=new String[]{"ingot_tin","ingot_copper","ingot_silver","ingot_lead","ingot_nickel","ingot_platinum","ingot_aluminum",};
+    private String[] names=new String[]{"ingot_tin","ingot_copper","ingot_silver","ingot_lead","ingot_nickel","ingot_platinum","ingot_aluminum","ingot_mithril"};
 	private IIcon[] textures=new IIcon[names.length];
 	public ItemIngot()
 	{

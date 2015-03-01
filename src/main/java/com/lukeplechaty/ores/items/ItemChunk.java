@@ -12,7 +12,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 public class ItemChunk extends Item
 {
-    private String[] names=new String[]{"chunk_iron","chunk_gold","chunk_tin","chunk_copper","chunk_silver","chunk_lead","chunk_nickel","chunk_platinum","chunk_aluminum"};
+    private String[] names=new String[]{"chunk_iron","chunk_gold","chunk_tin","chunk_copper","chunk_silver","chunk_lead","chunk_nickel","chunk_platinum","chunk_aluminum","chunk_mithril"};
 	private IIcon[] textures=new IIcon[names.length];
 	public ItemChunk()
 	{

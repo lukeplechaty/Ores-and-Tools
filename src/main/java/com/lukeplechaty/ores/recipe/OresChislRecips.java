@@ -31,8 +31,9 @@ public class OresChislRecips
 			ChislHandler.addtolist("oreSilver",new ItemStack(Ores.chunks,1,4),new ItemStack(cobble),3);
 			ChislHandler.addtolist("oreLead",new ItemStack(Ores.chunks,1,5),new ItemStack(cobble),3);
 			ChislHandler.addtolist("oreNickel",new ItemStack(Ores.chunks,1,6),new ItemStack(cobble),3);
-			ChislHandler.addtolist("orePlatinum",new ItemStack(Ores.chunks,1,7),new ItemStack(cobble),3);
-			ChislHandler.addtolist("oreAluminum",new ItemStack(Ores.chunks,1,8),new ItemStack(cobble),3);
+			ChislHandler.addtolist("orePlatinum",new ItemStack(Ores.chunks,1,7),new ItemStack(cobble),4);
+			ChislHandler.addtolist("oreAluminum",new ItemStack(Ores.chunks,1,8),new ItemStack(cobble),2);
+			ChislHandler.addtolist("oreMithril",new ItemStack(Ores.chunks,1,9),new ItemStack(cobble),4);
 			
 			ChislHandler.addtolist("oreCertusQuartz","crystalCertusQuartz",new ItemStack(cobble),2);
 			ChislHandler.addtolist("oreSapphire","gemSapphire",new ItemStack(cobble),2);

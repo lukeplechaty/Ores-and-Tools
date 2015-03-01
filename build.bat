@@ -1,1 +1,1 @@
-gradle build
+D:\gradle\bin\gradle build

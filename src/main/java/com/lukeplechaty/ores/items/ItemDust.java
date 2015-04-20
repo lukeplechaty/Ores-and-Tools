@@ -8,7 +8,23 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 public class ItemDust extends Item
 {
-    private String[] names=new String[]{"dust_sodium","dust_sulfur","dust_charcoal","dust_iron","dust_gold","dust_tin","dust_copper","dust_silver","dust_lead","dust_nickel","dust_platinum","dust_aluminum","dust_mithril"};
+    private String[] names=new String[]{
+    		"dust_sodium",
+    		"dust_sulfur",
+    		"dust_charcoal",
+    		"dust_iron",
+    		"dust_gold",
+    		"dust_tin",
+    		"dust_copper",
+    		"dust_silver",
+    		"dust_lead",
+    		"dust_nickel",
+    		"dust_platinum",
+    		"dust_aluminum",
+    		"dust_mithril",
+    		"dust_cobalt",
+    		"dust_ardite",
+    		"dust_yellorium"};
 	private IIcon[] textures=new IIcon[names.length];
 	public ItemDust()
 	{
@@ -21,7 +37,7 @@ public class ItemDust extends Item
 	}
 	public void getSubItems(Item i, CreativeTabs c, List l)
 	{
-	    for (int x=0;x<textures.length;x++)
+	    for (int x=0;x<names.length;x++)
 	    {
 	        l.add(new ItemStack(this,1,x));
 	    }
@@ -36,7 +52,7 @@ public class ItemDust extends Item
 	}
 	public void registerIcons(IIconRegister register)
 	{
-	    for (int x=0;x<textures.length;x++)
+	    for (int x=0;x<names.length;x++)
 	    {
 	    	this.textures[x] = register.registerIcon("ores:"+names[x]);
 	    }

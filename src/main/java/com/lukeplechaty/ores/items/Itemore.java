@@ -11,7 +11,11 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.*;
 public class Itemore extends Item
 {
-    private String[] names=new String[]{"seed","sodium","sulfur","handel"};
+    private String[] names=new String[]{
+    		"seed",
+    		"sodium",
+    		"sulfur",
+    		"handel"};
 	private IIcon[] textures=new IIcon[names.length];
 	public Itemore()
 	{

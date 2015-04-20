@@ -42,6 +42,12 @@ public class OresRecipe
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,11),new ItemStack(Ores.ingots,1,6),0.85f);
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,9),new ItemStack(Ores.ingots,1,7),0.85f);		//mithril
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,12),new ItemStack(Ores.ingots,1,7),0.85f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,10),new ItemStack(Ores.ingots,1,8),0.85f);		//cobalt
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,13),new ItemStack(Ores.ingots,1,8),0.85f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,11),new ItemStack(Ores.ingots,1,9),0.85f);		//ardite
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,14),new ItemStack(Ores.ingots,1,9),0.85f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,12),new ItemStack(Ores.ingots,1,10),0.85f);		//yellorium
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,15),new ItemStack(Ores.ingots,1,10),0.85f);
 		
 		List<IRecipe> crafting=CraftingManager.getInstance().getRecipeList();
 		crafting.add(new ShapedOreRecipe(new ItemStack(Blocks.torch,4),new Object[]{"y","x",'x',"stickWood",'y',"chunkSulfur"}));

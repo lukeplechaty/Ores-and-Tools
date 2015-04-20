@@ -12,7 +12,20 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 public class ItemChunk extends Item
 {
-    private String[] names=new String[]{"chunk_iron","chunk_gold","chunk_tin","chunk_copper","chunk_silver","chunk_lead","chunk_nickel","chunk_platinum","chunk_aluminum","chunk_mithril"};
+    private String[] names=new String[]{
+    		"chunk_iron",
+    		"chunk_gold",
+    		"chunk_tin",
+    		"chunk_copper",
+    		"chunk_silver",
+    		"chunk_lead",
+    		"chunk_nickel",
+    		"chunk_platinum",
+    		"chunk_aluminum",
+    		"chunk_mithril",
+    		"chunk_cobalt",
+    		"chunk_ardite",
+    		"chunk_yellorium"};
 	private IIcon[] textures=new IIcon[names.length];
 	public ItemChunk()
 	{
@@ -23,7 +36,6 @@ public class ItemChunk extends Item
 		setHasSubtypes(true);
 		setMaxDamage(0);
 	}
-	
 	public boolean hasCustomEntity(ItemStack itemstack)
 	{
 		return true;
@@ -32,10 +44,9 @@ public class ItemChunk extends Item
 	{
 		return new EntityChunk(world,(EntityItem)entity,itemstack);
 	}
-	
 	public void getSubItems(Item i, CreativeTabs c, List l)
 	{
-	    for (int x=0;x<textures.length;x++)
+	    for (int x=0;x<names.length;x++)
 	    {
 	        l.add(new ItemStack(this,1,x));
 	    }
@@ -50,7 +61,7 @@ public class ItemChunk extends Item
 	}
 	public void registerIcons(IIconRegister register)
 	{
-	    for (int x=0;x<textures.length;x++)
+	    for (int x=0;x<names.length;x++)
 	    {
 	    	this.textures[x] = register.registerIcon("ores:"+names[x]);
 	    }

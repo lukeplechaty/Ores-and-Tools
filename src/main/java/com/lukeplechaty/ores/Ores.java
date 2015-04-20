@@ -15,7 +15,7 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.registry.GameRegistry;
-@Mod(modid="OAT",name="Ores and Tools",version="1.7.10-0.4.0")
+@Mod(modid="OAT",name="Ores and Tools",version="1.7.10-0.4.1")
 public class Ores
 {
 	GenOre genore = new GenOre();
@@ -34,6 +34,7 @@ public class Ores
 	public static Item chunks;
 	public static Item ingots;
 	public static Item dusts;
+	public static Item gem;
 	
 	public static Item chiselwood;
 	public static Item chiselstone;
@@ -114,6 +115,7 @@ public class Ores
 		chunks=(new ItemChunk());
 		ingots=(new ItemIngot());
 		dusts=(new ItemDust());
+		gem=(new ItemGem());
 		
 		chiselwood=(new ItemChisel(MT[0],DG[0],1));
 		chiselstone=(new ItemChisel(MT[1],DG[1],2));
@@ -168,6 +170,7 @@ public class Ores
 		GameRegistry.registerItem(chunks,"ores_chunks");
 		GameRegistry.registerItem(ingots,"ores_ingots");
 		GameRegistry.registerItem(dusts,"ores_dusts");
+		GameRegistry.registerItem(gem,"ores_gems");
 		
 		GameRegistry.registerItem(chiselwood,"chisel_wood");
 		GameRegistry.registerItem(chiselstone,"chisel_stone");
@@ -223,5 +226,8 @@ public class Ores
 		ItemChisel.loadlist();
 	}
 	@EventHandler
-	public void Postload(FMLPostInitializationEvent event){}
+	public void Postload(FMLPostInitializationEvent event)
+	{
+		OresControl.name();
+	}
 }

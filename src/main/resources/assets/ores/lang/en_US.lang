@@ -23,6 +23,9 @@ dust_nickel.name=Nickel Dust
 dust_platinum.name=Platinum Dust
 dust_aluminum.name=Aluminum Dust
 dust_mithril.name=Mithril Dust
+dust_cobalt.name=Cobalt Dust
+dust_ardite.name=Ardite Dust
+dust_yellorium.name=Yellorium Dust
 
 chunk_iron.name=Iron Chunk
 chunk_gold.name=Gold Chunk
@@ -34,6 +37,9 @@ chunk_nickel.name=Nickel Chunk
 chunk_platinum.name=Platinum Chunk
 chunk_aluminum.name=Aluminum Chunk
 chunk_mithril.name=Mithril Chunk
+chunk_cobalt.name=Cobalt Chunk
+chunk_ardite.name=Ardite Chunk
+chunk_yellorium.name=Yellorium Chunk
 
 ingot_tin.name=Tin Ingot
 ingot_copper.name=Copper Ingot
@@ -43,6 +49,14 @@ ingot_nickel.name=Nickel Ingot
 ingot_platinum.name=Platinum Ingot
 ingot_aluminum.name=Aluminum Ingot
 ingot_mithril.name=Mithril Ingot
+ingot_cobalt.name=Cobalt Ingot
+ingot_ardite.name=Ardite Ingot
+ingot_yellorium.name=Yellorium Ingot
+
+gem_certus_quartz.name=Certus Quartz
+gem_sapphire.name=Sapphire
+gem_ruby.name=Ruby
+gem_peridot.name=Peridot
 
 item.mortarandpestle.name=Mortar and Pestle
 

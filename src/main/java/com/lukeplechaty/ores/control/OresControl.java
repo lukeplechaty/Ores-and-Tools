@@ -2,7 +2,6 @@ package com.lukeplechaty.ores.control;
 import java.util.ArrayList;
 import com.lukeplechaty.ores.Ores;
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
@@ -106,8 +105,9 @@ public class OresControl
 		if(world.getBlock(x,y,z)==block&&world.getBlockMetadata(x,y,z)==meta)return true;
 		return false;
 	}
-	public static ItemStack getOre(String string)
+	public static ItemStack getOre(String string, int stackSize)
 	{
-		return new ItemStack(ID(string),1,Meta(string));
+		if(Ores.debug)System.out.println("getitem string,stack: "+string+" "+stackSize);
+		return new ItemStack(ID(string),stackSize,Meta(string));
 	}
 }

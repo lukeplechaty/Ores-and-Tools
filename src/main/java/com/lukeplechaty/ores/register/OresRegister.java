@@ -30,6 +30,9 @@ public class OresRegister
 		OresControl.addOre("dustPlatinum",new ItemStack(Ores.dusts,1,10));
 		OresControl.addOre("dustAluminum",new ItemStack(Ores.dusts,1,11));
 		OresControl.addOre("dustMithril",new ItemStack(Ores.dusts,1,12));
+		OresControl.addOre("dustCobalt",new ItemStack(Ores.dusts,1,13));
+		OresControl.addOre("dustArdite",new ItemStack(Ores.dusts,1,14));
+		OresControl.addOre("dustYellorium",new ItemStack(Ores.dusts,1,15));
 		
 		OresControl.addOre("oreIron",new ItemStack(Ores.chunks,1,0));
 		OresControl.addOre("oreGold",new ItemStack(Ores.chunks,1,1));
@@ -41,6 +44,9 @@ public class OresRegister
 		OresControl.addOre("orePlatinum",new ItemStack(Ores.chunks,1,7));
 		OresControl.addOre("oreAluminum",new ItemStack(Ores.chunks,1,8));
 		OresControl.addOre("oreMithril",new ItemStack(Ores.chunks,1,9));
+		OresControl.addOre("oreCobalt",new ItemStack(Ores.chunks,1,10));
+		OresControl.addOre("oreArdite",new ItemStack(Ores.chunks,1,11));
+		OresControl.addOre("oreYellorium",new ItemStack(Ores.chunks,1,12));
 
 		OresControl.addOre("ingotTin",new ItemStack(Ores.ingots,1,0));
 		OresControl.addOre("ingotCopper",new ItemStack(Ores.ingots,1,1));
@@ -50,6 +56,14 @@ public class OresRegister
 		OresControl.addOre("ingotPlatinum",new ItemStack(Ores.ingots,1,5));
 		OresControl.addOre("ingotAluminum",new ItemStack(Ores.ingots,1,6));
 		OresControl.addOre("ingotMithril",new ItemStack(Ores.ingots,1,7));
+		OresControl.addOre("ingotCobalt",new ItemStack(Ores.ingots,1,8));
+		OresControl.addOre("ingotArdite",new ItemStack(Ores.ingots,1,9));
+		OresControl.addOre("ingotYellorium",new ItemStack(Ores.ingots,1,10));
+
+		OresControl.addOre("crystalCertusQuartz",new ItemStack(Ores.gem,1,0));
+		OresControl.addOre("gemSapphire",new ItemStack(Ores.gem,1,1));
+		OresControl.addOre("gemRuby",new ItemStack(Ores.gem,1,2));
+		OresControl.addOre("gemPeridot",new ItemStack(Ores.gem,1,3));
 		
 		if(Ores.debug)System.out.println("OreDictionary added");
 	}

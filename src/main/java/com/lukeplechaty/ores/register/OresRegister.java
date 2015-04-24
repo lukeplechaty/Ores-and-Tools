@@ -29,6 +29,7 @@ public class OresRegister
 		OresControl.addOre("dustNickel",new ItemStack(Ores.dusts,1,9));
 		OresControl.addOre("dustPlatinum",new ItemStack(Ores.dusts,1,10));
 		OresControl.addOre("dustAluminum",new ItemStack(Ores.dusts,1,11));
+		OresControl.addOre("dustAluminium",new ItemStack(Ores.dusts,1,11));
 		OresControl.addOre("dustMithril",new ItemStack(Ores.dusts,1,12));
 		OresControl.addOre("dustCobalt",new ItemStack(Ores.dusts,1,13));
 		OresControl.addOre("dustArdite",new ItemStack(Ores.dusts,1,14));
@@ -43,6 +44,7 @@ public class OresRegister
 		OresControl.addOre("oreNickel",new ItemStack(Ores.chunks,1,6));
 		OresControl.addOre("orePlatinum",new ItemStack(Ores.chunks,1,7));
 		OresControl.addOre("oreAluminum",new ItemStack(Ores.chunks,1,8));
+		OresControl.addOre("oreAluminium",new ItemStack(Ores.chunks,1,8));
 		OresControl.addOre("oreMithril",new ItemStack(Ores.chunks,1,9));
 		OresControl.addOre("oreCobalt",new ItemStack(Ores.chunks,1,10));
 		OresControl.addOre("oreArdite",new ItemStack(Ores.chunks,1,11));
@@ -55,6 +57,7 @@ public class OresRegister
 		OresControl.addOre("ingotNickel",new ItemStack(Ores.ingots,1,4));
 		OresControl.addOre("ingotPlatinum",new ItemStack(Ores.ingots,1,5));
 		OresControl.addOre("ingotAluminum",new ItemStack(Ores.ingots,1,6));
+		OresControl.addOre("ingotAluminium",new ItemStack(Ores.ingots,1,6));
 		OresControl.addOre("ingotMithril",new ItemStack(Ores.ingots,1,7));
 		OresControl.addOre("ingotCobalt",new ItemStack(Ores.ingots,1,8));
 		OresControl.addOre("ingotArdite",new ItemStack(Ores.ingots,1,9));

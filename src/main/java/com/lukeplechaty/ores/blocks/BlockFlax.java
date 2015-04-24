@@ -102,7 +102,7 @@ public class BlockFlax extends BlockBush implements IGrowable
 	{
 		return 6;
 	}
-	public ArrayList getBlockDropped(World a,int i,int j,int k,int l,int m)
+	public ArrayList getDrops(World a,int i,int j,int k,int l,int m)
 	{
 		ArrayList<ItemStack> b=new ArrayList<ItemStack>();
 		for(int n=0;n<2+m;n++)
@@ -116,7 +116,7 @@ public class BlockFlax extends BlockBush implements IGrowable
 		{
 			if(a.rand.nextInt(15)<=l)
 			{
-				b.add(new ItemStack(Ores.items,1,2));
+				b.add(new ItemStack(Ores.items,1,0));
 			}
 		}
 		return b;

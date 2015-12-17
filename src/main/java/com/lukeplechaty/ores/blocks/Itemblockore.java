@@ -7,15 +7,15 @@ import net.minecraft.item.*;
 public class Itemblockore extends ItemBlock
 {
 	private String[] names=new String[]{"fossils","sodium","sulfur"};
-	public Itemblockore(Block id)
+	public Itemblockore(Block block)
 	{
-		super(id);
+		super(block);
 		if(Ores.debug)System.out.println("adding block items");
 		setUnlocalizedName("ore0");
 		setCreativeTab(Ores.tabOres);
 		setHasSubtypes(true);
 	}
-	public void getSubItems(Item id, CreativeTabs creativetabs, List list)
+	public void getSubItems(Item item, CreativeTabs creativetabs, List list)
 	{
 	    for (int meta=0;meta<names.length;meta++)
 	    {

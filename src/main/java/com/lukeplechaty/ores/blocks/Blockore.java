@@ -1,7 +1,7 @@
 package com.lukeplechaty.ores.blocks;
 import java.util.Random;
 import com.lukeplechaty.ores.Ores;
-import com.lukeplechaty.ores.render.OresBlockRender;
+import com.lukeplechaty.ores.render.Render;
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -12,7 +12,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 public class Blockore extends Block
 {
-    private static IIcon[] textures=new IIcon[3];
+    private IIcon[] textures=new IIcon[3];
 	public Blockore()
 	{
 		super(Material.rock);
@@ -31,11 +31,11 @@ public class Blockore extends Block
 	}
 	public int getRenderType()
 	{
-		return OresBlockRender.OverlayRenderType;
+		return Render.BlockOverlayRenderID;
 	}
 	public boolean canRenderInPass(int pass)
 	{
-		OresBlockRender.renderPass = pass;
+		Render.OreBlockRenderPass = pass;
 		return true;
 	}
 	public int getRenderBlockPass()
@@ -60,7 +60,7 @@ public class Blockore extends Block
 			case 2:return 5.0f;
 		}
     }
-	public int quantityDropped(int meta,int b,Random random)
+	public int quantityDropped(int meta,int fortune,Random random)
 	{
 		switch(meta)
 		{
@@ -69,7 +69,7 @@ public class Blockore extends Block
 			case 2:return 1+random.nextInt(3);
 		}
 	}
-	public Item getItemDropped(int meta,Random random,int i)
+	public Item getItemDropped(int meta,Random random,int amount)
 	{
 		switch(meta)
 		{

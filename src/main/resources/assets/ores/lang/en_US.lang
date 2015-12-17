@@ -10,9 +10,6 @@ sodium.name=Saltpeter
 sulfur.name=Sulfur
 handel.name=Handel
 
-dust_sodium.name=Saltpeter Dust
-dust_sulfur.name=Sulfur Dust
-dust_charcoal.name=Charcoal Dust
 dust_iron.name=Iron Dust
 dust_gold.name=Gold Dust
 dust_tin.name=Tin Dust
@@ -26,6 +23,10 @@ dust_mithril.name=Mithril Dust
 dust_cobalt.name=Cobalt Dust
 dust_ardite.name=Ardite Dust
 dust_yellorium.name=Yellorium Dust
+dust_flour.name=Flour
+dust_sodium.name=Saltpeter Dust
+dust_sulfur.name=Sulfur Dust
+dust_charcoal.name=Charcoal Dust
 
 chunk_iron.name=Iron Chunk
 chunk_gold.name=Gold Chunk

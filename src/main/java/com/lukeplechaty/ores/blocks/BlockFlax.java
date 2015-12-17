@@ -23,69 +23,69 @@ public class BlockFlax extends BlockBush implements IGrowable
 		setTickRandomly(true);
 		setBlockBounds(0.0F,0.0F,0.0F,1.0F,0.25F,1.0F);
 	}
-	public IIcon getIcon(int i,int j)
+	public IIcon getIcon(int side,int meta)
 	{
-		return textures[j];
+		return textures[meta];
 	}
-	protected boolean canPlaceBlockOn(Block i)
+	protected boolean canPlaceBlockOn(Block block)
 	{
-		return i==Blocks.farmland;
+		return block==Blocks.farmland;
 	}
-	public void updateTick(World a,int i,int j,int k,Random b)
+	public void updateTick(World world,int x,int y,int z,Random random)
 	{
-		super.updateTick(a,i,j,k,b);
-		if(a.getBlockLightValue(i,j+1,k)>=9)
+		super.updateTick(world,x,y,z,random);
+		if(world.getBlockLightValue(x,y+1,z)>=9)
 		{
-			int l=a.getBlockMetadata(i,j,k);
-			if(l<7)
+			int meta=world.getBlockMetadata(x,y,z);
+			if(meta<7)
 			{
-				float f=grow(a,i,j,k);
-				if(b.nextInt((int)(25F/f))==0)
+				float grow=grow(world,x,y,z);
+				if(random.nextInt((int)(25F/grow))==0)
 				{
-					l++;
-					a.setBlockMetadataWithNotify(i,j,k,l,2);
+					meta++;
+					world.setBlockMetadataWithNotify(x,y,z,meta,2);
 				}
 			}
 		}
 	}
-	public void fertilize(World a,int i,int j,int k)
+	public void fertilize(World world,int x,int y,int z)
 	{
-		int l=a.getBlockMetadata(i,j,k)+MathHelper.getRandomIntegerInRange(a.rand,2,5);
-		if(l>7)
+		int meta=world.getBlockMetadata(x,y,z)+MathHelper.getRandomIntegerInRange(world.rand,2,5);
+		if(meta>7)
 		{
-			l=7;
+			meta=7;
 		}
-		a.setBlockMetadataWithNotify(i,j,k,l,2);
+		world.setBlockMetadataWithNotify(x,y,z,meta,2);
 	}
-	private float grow(World a,int i,int j,int k)
+	private float grow(World world,int x,int y,int z)
 	{
 		float f=1.0F;
-		Block l=a.getBlock(i,j,k-1);
-		Block i1=a.getBlock(i,j,k+1);
-		Block j1=a.getBlock(i-1,j,k);
-		Block k1=a.getBlock(i+1,j,k);
-		Block l1=a.getBlock(i-1,j,k-1);
-		Block i2=a.getBlock(i+1,j,k-1);
-		Block j2=a.getBlock(i+1,j,k+1);
-		Block k2=a.getBlock(i-1,j,k+1);
+		Block l=world.getBlock(x,y,z-1);
+		Block i1=world.getBlock(x,y,z+1);
+		Block j1=world.getBlock(x-1,y,z);
+		Block k1=world.getBlock(x+1,y,z);
+		Block l1=world.getBlock(x-1,y,z-1);
+		Block i2=world.getBlock(x+1,y,z-1);
+		Block j2=world.getBlock(x+1,y,z+1);
+		Block k2=world.getBlock(x-1,y,z+1);
 		boolean flag=j1==this||k1==this;
 		boolean flag1=l==this||i1==this;
 		boolean flag2=l1==this||i2==this||j2==this||k2==this;
-		for(int l2=i-1;l2<=i+1;l2++)
+		for(int l2=x-1;l2<=x+1;l2++)
 		{
-			for(int i3=k-1;i3<=k+1;i3++)
+			for(int i3=z-1;i3<=z+1;i3++)
 			{
-				Block j3=a.getBlock(l2,j-1,i3);
+				Block block=world.getBlock(l2,y-1,i3);
 				float f1=0.0F;
-				if(j3==Blocks.farmland)
+				if(block==Blocks.farmland)
 				{
 					f1=1.0F;
-					if(a.getBlockMetadata(l2,j-1,i3)>0)
+					if(world.getBlockMetadata(l2,y-1,i3)>0)
 					{
 						f1=3.0F;
 					}
 				}
-				if(l2!=i||i3!=k)
+				if(l2!=x||i3!=z)
 				{
 					f1/=4.0F;
 				}
@@ -102,30 +102,30 @@ public class BlockFlax extends BlockBush implements IGrowable
 	{
 		return 6;
 	}
-	public ArrayList getDrops(World a,int i,int j,int k,int l,int m)
+	public ArrayList getDrops(World world,int x,int y,int z,int meta,int fortune)
 	{
-		ArrayList<ItemStack> b=new ArrayList<ItemStack>();
-		for(int n=0;n<2+m;n++)
+		ArrayList<ItemStack> list=new ArrayList<ItemStack>();
+		for(int amount=0;amount<2+fortune;amount++)
 		{
-			if(l==7)
+			if(meta==7)
 			{
-				b.add(new ItemStack(Items.string,1));
+				list.add(new ItemStack(Items.string,1));
 			}
 		}
-		for(int n=0;n<3+m;n++)
+		for(int amount=0;amount<3+fortune;amount++)
 		{
-			if(a.rand.nextInt(15)<=l)
+			if(world.rand.nextInt(15)<=meta)
 			{
-				b.add(new ItemStack(Ores.items,1,0));
+				list.add(new ItemStack(Ores.items,1,0));
 			}
 		}
-		return b;
+		return list;
 	}
 	public void registerBlockIcons(IIconRegister register)
 	{
-		for(int i=0;i<textures.length;++i)
+		for(int id=0;id<textures.length;++id)
         {
-            this.textures[i]=register.registerIcon("ores:crop_"+i);
+            this.textures[id]=register.registerIcon("ores:crop_"+id);
         }
 	}
 	public boolean func_149851_a(World world,int x,int y,int z,boolean var0)

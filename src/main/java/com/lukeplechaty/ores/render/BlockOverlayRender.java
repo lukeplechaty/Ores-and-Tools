@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.IBlockAccess;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
-public class OverlayRender implements ISimpleBlockRenderingHandler
+public class BlockOverlayRender implements ISimpleBlockRenderingHandler
 {
 	public void renderInventoryBlock(Block block,int metadata,int modelId,RenderBlocks renderer)
 	{
@@ -52,7 +52,7 @@ public class OverlayRender implements ISimpleBlockRenderingHandler
 	}
 	public boolean renderWorldBlock(IBlockAccess world,int x,int y,int z,Block block,int modelId,RenderBlocks renderer)
 	{
-		if(OresBlockRender.renderPass==0)
+		if(Render.OreBlockRenderPass==0)
 		{
 			renderer.renderStandardBlock(Blocks.stone,x,y,z);
 		}
@@ -68,7 +68,7 @@ public class OverlayRender implements ISimpleBlockRenderingHandler
 	}
 	public int getRenderId()
 	{
-		return OresBlockRender.OverlayRenderType;
+		return Render.BlockOverlayRenderID;
 	}
 	
 }

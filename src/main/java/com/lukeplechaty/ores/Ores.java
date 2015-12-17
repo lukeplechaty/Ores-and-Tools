@@ -15,7 +15,7 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.registry.GameRegistry;
-@Mod(modid="OAT",name="Ores and Tools",version="1.7.10-0.4.2")
+@Mod(modid="OAT",name="Ores and Tools",version="1.7.10-0.5.0")
 public class Ores
 {
 	GenOre genore = new GenOre();
@@ -222,7 +222,7 @@ public class Ores
 		FMLCommonHandler.instance().bus().register(new OresEvent());
 		GameRegistry.registerWorldGenerator(genore,0);
 		OresChislRecips.recipe();
-		OresBlockRender.setCustomRenderers();
+		Render.setCustomRenderers();
 		ItemChisel.loadlist();
 	}
 	@EventHandler

@@ -9,9 +9,6 @@ import net.minecraft.util.IIcon;
 public class ItemDust extends Item
 {
     private String[] names=new String[]{
-    		"dust_sodium",
-    		"dust_sulfur",
-    		"dust_charcoal",
     		"dust_iron",
     		"dust_gold",
     		"dust_tin",
@@ -24,7 +21,11 @@ public class ItemDust extends Item
     		"dust_mithril",
     		"dust_cobalt",
     		"dust_ardite",
-    		"dust_yellorium"};
+    		"dust_yellorium",
+    		"dust_flour",
+    		"dust_sodium",
+    		"dust_sulfur",
+    		"dust_charcoal"};
 	private IIcon[] textures=new IIcon[names.length];
 	public ItemDust()
 	{
@@ -35,26 +36,26 @@ public class ItemDust extends Item
 		setHasSubtypes(true);
 		setMaxDamage(0);
 	}
-	public void getSubItems(Item i, CreativeTabs c, List l)
+	public void getSubItems(Item item, CreativeTabs tab, List list)
 	{
-	    for (int x=0;x<names.length;x++)
+	    for (int amount=0;amount<names.length;amount++)
 	    {
-	        l.add(new ItemStack(this,1,x));
+	        list.add(new ItemStack(this,1,amount));
 	    }
 	}
-	public IIcon getIconFromDamage(int i)
+	public IIcon getIconFromDamage(int meta)
 	{
-		return textures[i];
+		return textures[meta];
 	}
-	public String getUnlocalizedName(ItemStack i)
+	public String getUnlocalizedName(ItemStack itemStack)
 	{
-		return names[i.getItemDamage()];
+		return names[itemStack.getItemDamage()];
 	}
 	public void registerIcons(IIconRegister register)
 	{
-	    for (int x=0;x<names.length;x++)
+	    for (int amount=0;amount<names.length;amount++)
 	    {
-	    	this.textures[x] = register.registerIcon("ores:"+names[x]);
+	    	this.textures[amount] = register.registerIcon("ores:"+names[amount]);
 	    }
 	}
 }

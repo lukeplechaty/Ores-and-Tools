@@ -26,38 +26,38 @@ public class Itemore extends Item
 		setHasSubtypes(true);
 		setMaxDamage(0);
 	}
-	public void getSubItems(Item i, CreativeTabs c, List l)
+	public void getSubItems(Item item, CreativeTabs tab, List list)
 	{
-	    for (int x=0;x<textures.length;x++)
+	    for (int amount=0;amount<textures.length;amount++)
 	    {
-	        l.add(new ItemStack(this,1,x));
+	    	list.add(new ItemStack(this,1,amount));
 	    }
 	}
-	public IIcon getIconFromDamage(int i)
+	public IIcon getIconFromDamage(int meta)
 	{
-		return textures[i];
+		return textures[meta];
 	}
-	public String getUnlocalizedName(ItemStack i)
+	public String getUnlocalizedName(ItemStack itemStack)
 	{
-		return names[i.getItemDamage()];
+		return names[itemStack.getItemDamage()];
 	}
-	public boolean onItemUse(ItemStack a,EntityPlayer b,World c,int i,int j,int k,int l,float m,float n,float o)
+	public boolean onItemUse(ItemStack itemStack,EntityPlayer entityplayer,World world,int x,int y,int z,int meta,float xf,float yf,float zf)
 	{
-		if(a.getItemDamage()==0)
+		if(itemStack.getUnlocalizedName()=="seed")
 		{
-			if(l!=1)
+			if(meta!=1)
 			{
 				return false;
 			}
-			if(!b.canPlayerEdit(i,j,k,l,a)||!b.canPlayerEdit(i,j+1,k,l,a))
+			if(!entityplayer.canPlayerEdit(x,y,z,meta,itemStack)||!entityplayer.canPlayerEdit(x,y+1,z,meta,itemStack))
 			{
 				return false;
 			}
-			Block p=c.getBlock(i,j,k);
-			if(p==Blocks.farmland&&c.isAirBlock(i,j+1,k))
+			Block block=world.getBlock(x,y,z);
+			if(block==Blocks.farmland && world.isAirBlock(x,y+1,z))
 			{
-				c.setBlock(i,j+1,k,Ores.crop);
-				a.stackSize--;
+				world.setBlock(x,y+1,z,Ores.crop);
+				itemStack.stackSize--;
 				return true;
 			}
 			else
@@ -69,9 +69,9 @@ public class Itemore extends Item
 	}
 	public void registerIcons(IIconRegister register)
 	{
-	    for (int x=0;x<textures.length;x++)
+	    for (int amount=0;amount<textures.length;amount++)
 	    {
-	    	this.textures[x] = register.registerIcon("ores:"+names[x]);
+	    	this.textures[amount] = register.registerIcon("ores:"+names[amount]);
 	    }
 	}
 }

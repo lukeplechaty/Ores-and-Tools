@@ -23,31 +23,32 @@ public class OresRecipe
 		if(Ores.debug)System.out.println("adding recipe");
 		
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,0),new ItemStack(Items.iron_ingot,1,0),0.7f);	//iron
-		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,3),new ItemStack(Items.iron_ingot,1,0),0.7f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,0),new ItemStack(Items.iron_ingot,1,0),0.7f);
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,1),new ItemStack(Items.gold_ingot,1,0),1.0f);	//gold
-		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,4),new ItemStack(Items.gold_ingot,1,0),1.0f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,1),new ItemStack(Items.gold_ingot,1,0),1.0f);
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,2),new ItemStack(Ores.ingots,1,0),0.55f);		//tin
-		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,5),new ItemStack(Ores.ingots,1,0),0.55f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,2),new ItemStack(Ores.ingots,1,0),0.55f);
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,3),new ItemStack(Ores.ingots,1,1),0.4f);		//copper
-		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,6),new ItemStack(Ores.ingots,1,1),0.4f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,3),new ItemStack(Ores.ingots,1,1),0.4f);
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,4),new ItemStack(Ores.ingots,1,2),0.85f);		//silver
-		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,7),new ItemStack(Ores.ingots,1,2),0.85f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,4),new ItemStack(Ores.ingots,1,2),0.85f);
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,5),new ItemStack(Ores.ingots,1,3),0.85f);		//lead
-		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,8),new ItemStack(Ores.ingots,1,3),0.85f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,5),new ItemStack(Ores.ingots,1,3),0.85f);
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,6),new ItemStack(Ores.ingots,1,4),0.85f);		//nickel
-		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,9),new ItemStack(Ores.ingots,1,4),0.85f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,6),new ItemStack(Ores.ingots,1,4),0.85f);
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,7),new ItemStack(Ores.ingots,1,5),0.85f);		//platinum
-		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,10),new ItemStack(Ores.ingots,1,5),0.85f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,7),new ItemStack(Ores.ingots,1,5),0.85f);
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,8),new ItemStack(Ores.ingots,1,6),0.85f);		//aluminum
-		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,11),new ItemStack(Ores.ingots,1,6),0.85f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,8),new ItemStack(Ores.ingots,1,6),0.85f);
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,9),new ItemStack(Ores.ingots,1,7),0.85f);		//mithril
-		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,12),new ItemStack(Ores.ingots,1,7),0.85f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,9),new ItemStack(Ores.ingots,1,7),0.85f);
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,10),new ItemStack(Ores.ingots,1,8),0.85f);		//cobalt
-		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,13),new ItemStack(Ores.ingots,1,8),0.85f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,10),new ItemStack(Ores.ingots,1,8),0.85f);
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,11),new ItemStack(Ores.ingots,1,9),0.85f);		//ardite
-		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,14),new ItemStack(Ores.ingots,1,9),0.85f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,11),new ItemStack(Ores.ingots,1,9),0.85f);
 		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.chunks,1,12),new ItemStack(Ores.ingots,1,10),0.85f);		//yellorium
-		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,15),new ItemStack(Ores.ingots,1,10),0.85f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,12),new ItemStack(Ores.ingots,1,10),0.85f);
+		FurnaceRecipes.smelting().func_151394_a(new ItemStack(Ores.dusts,1,13),new ItemStack(Items.bread),0.85f);			//bread
 		
 		List<IRecipe> crafting=CraftingManager.getInstance().getRecipeList();
 		crafting.add(new ShapedOreRecipe(new ItemStack(Blocks.torch,4),new Object[]{"y","x",'x',"stickWood",'y',"chunkSulfur"}));
@@ -65,9 +66,10 @@ public class OresRecipe
 		
 		crafting.add(new ShapelessOreRecipe(new ItemStack(Items.gunpowder,2),new Object[]{"dustCharcoal","dustSaltpeter","dustSaltpeter","dustSulfur"}));
 		crafting.add(new ShapelessOreRecipe(new ItemStack(Items.string,4),new Object[]{new ItemStack(Blocks.wool)}));
-		crafting.add(new ShapelessOreRecipe(new ItemStack(Ores.dusts,1,0),new Object[]{new ItemStack(Ores.mortarandpestle,1,all),"chunkSaltpeter"}));
-		crafting.add(new ShapelessOreRecipe(new ItemStack(Ores.dusts,1,1),new Object[]{new ItemStack(Ores.mortarandpestle,1,all),"chunkSulfur"}));
-		crafting.add(new ShapelessOreRecipe(new ItemStack(Ores.dusts,1,2),new Object[]{new ItemStack(Ores.mortarandpestle,1,all),new ItemStack(Items.coal,1,1)}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(Ores.dusts,1,13),new Object[]{new ItemStack(Ores.mortarandpestle,1,all),new ItemStack(Items.wheat)}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(Ores.dusts,1,14),new Object[]{new ItemStack(Ores.mortarandpestle,1,all),"chunkSaltpeter"}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(Ores.dusts,1,15),new Object[]{new ItemStack(Ores.mortarandpestle,1,all),"chunkSulfur"}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(Ores.dusts,1,16),new Object[]{new ItemStack(Ores.mortarandpestle,1,all),new ItemStack(Items.coal,1,1)}));
 		crafting.add(new ShapelessOreRecipe(new ItemStack(Items.dye,5,15),new Object[]{new ItemStack(Ores.mortarandpestle,1,all),new ItemStack(Items.bone,1,0)}));
 		
 		if(Ores.debug)System.out.println("recipe added");

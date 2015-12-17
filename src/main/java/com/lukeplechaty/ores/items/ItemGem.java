@@ -23,26 +23,26 @@ public class ItemGem extends Item
 		setHasSubtypes(true);
 		setMaxDamage(0);
 	}
-	public void getSubItems(Item i, CreativeTabs c, List l)
+	public void getSubItems(Item item, CreativeTabs tab, List list)
 	{
-	    for (int x=0;x<textures.length;x++)
+	    for (int amount=0;amount<textures.length;amount++)
 	    {
-	        l.add(new ItemStack(this,1,x));
+	        list.add(new ItemStack(this,1,amount));
 	    }
 	}
 	public IIcon getIconFromDamage(int i)
 	{
 		return textures[i];
 	}
-	public String getUnlocalizedName(ItemStack i)
+	public String getUnlocalizedName(ItemStack itemStack)
 	{
-		return names[i.getItemDamage()];
+		return names[itemStack.getItemDamage()];
 	}
 	public void registerIcons(IIconRegister register)
 	{
-	    for (int x=0;x<textures.length;x++)
+	    for (int amount=0;amount<textures.length;amount++)
 	    {
-	    	this.textures[x] = register.registerIcon("ores:"+names[x]);
+	    	this.textures[amount] = register.registerIcon("ores:"+names[amount]);
 	    }
 	}
 }

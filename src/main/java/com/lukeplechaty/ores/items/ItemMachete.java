@@ -35,10 +35,10 @@ public class ItemMachete extends Item
 		if(Blocks.leaves==block)return toolPower;
 		return 1.0F;
 	}
-	public boolean onBlockDestroyed(ItemStack itemstack,World world,Block i,int x,int y,int z,EntityLivingBase entitylivingbase)
+	public boolean onBlockDestroyed(ItemStack itemstack,World world,Block block,int x,int y,int z,EntityLivingBase entitylivingbase)
 	{
 		boolean done=false;
-		World block=entitylivingbase.worldObj;
+		World obj=entitylivingbase.worldObj;
 		int size=2;
 		for(int newX=-size;newX<=size;newX++)
 		{
@@ -46,16 +46,16 @@ public class ItemMachete extends Item
 			{
 				for(int newy=-size;newy<=size;newy++)
 				{
-					Block blockID=block.getBlock(x+newX,y+newy,z+newZ);
-					int blockMeta=block.getBlockMetadata(x+newX,y+newy,z+newZ);
+					Block blockID=obj.getBlock(x+newX,y+newy,z+newZ);
+					int blockMeta=obj.getBlockMetadata(x+newX,y+newy,z+newZ);
 					if(blockID==Blocks.air)continue;
 					Block list=blockID;
 					if(!(list instanceof BlockLeaves))continue;
-					boolean newBlock=block.setBlock(x+newX,y+newy,z+newZ,Blocks.air);
+					boolean newBlock=obj.setBlock(x+newX,y+newy,z+newZ,Blocks.air);
 					if(!newBlock)continue;
 					if(list.canHarvestBlock((EntityPlayer)entitylivingbase,blockMeta))
 					{
-						list.harvestBlock(block,(EntityPlayer)entitylivingbase,x+newX,y+newy,z+newZ,blockMeta);
+						list.harvestBlock(obj,(EntityPlayer)entitylivingbase,x+newX,y+newy,z+newZ,blockMeta);
 						itemstack.damageItem(1,entitylivingbase);
 					}
 					done=true;

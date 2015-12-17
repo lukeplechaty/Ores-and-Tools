@@ -30,26 +30,26 @@ public class ItemIngot extends Item
 		setHasSubtypes(true);
 		setMaxDamage(0);
 	}
-	public void getSubItems(Item i, CreativeTabs c, List l)
+	public void getSubItems(Item item, CreativeTabs tab, List list)
 	{
-	    for (int x=0;x<names.length;x++)
+	    for (int amount=0;amount<names.length;amount++)
 	    {
-	        l.add(new ItemStack(this,1,x));
+	    	list.add(new ItemStack(this,1,amount));
 	    }
 	}
-	public IIcon getIconFromDamage(int i)
+	public IIcon getIconFromDamage(int meta)
 	{
-		return textures[i];
+		return textures[meta];
 	}
-	public String getUnlocalizedName(ItemStack i)
+	public String getUnlocalizedName(ItemStack itemStack)
 	{
-		return names[i.getItemDamage()];
+		return names[itemStack.getItemDamage()];
 	}
 	public void registerIcons(IIconRegister register)
 	{
-	    for (int x=0;x<names.length;x++)
+	    for (int amount=0;amount<names.length;amount++)
 	    {
-	    	this.textures[x] = register.registerIcon("ores:"+names[x]);
+	    	this.textures[amount] = register.registerIcon("ores:"+names[amount]);
 	    }
 	}
 }

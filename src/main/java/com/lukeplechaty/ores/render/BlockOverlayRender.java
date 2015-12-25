@@ -52,15 +52,8 @@ public class BlockOverlayRender implements ISimpleBlockRenderingHandler
 	}
 	public boolean renderWorldBlock(IBlockAccess world,int x,int y,int z,Block block,int modelId,RenderBlocks renderer)
 	{
-		if(Render.OreBlockRenderPass==0)
-		{
-			renderer.renderStandardBlock(Blocks.stone,x,y,z);
-		}
-		else
-		{
-			renderer.renderStandardBlock(block,x,y,z);
-		}
-		return true;
+		renderer.renderStandardBlock(Blocks.stone,x,y,z);
+		return renderer.renderStandardBlock(block,x,y,z);
 	}
 	public boolean shouldRender3DInInventory(int modelId)
 	{

@@ -74,7 +74,7 @@ public class GenOre implements IWorldGenerator
 	}
 	public void generate(Random random,int x,int z,World world,IChunkProvider ichunkprovider1,IChunkProvider ichunkprovider2)
 	{
-		if(!(world.provider.dimensionId==-1)||!(world.provider.dimensionId==0))
+		if(!(world.provider.dimensionId==-1)||!(world.provider.dimensionId==1))
 		{
 			generateSurface(world,random,x*16,z*16);
 		}

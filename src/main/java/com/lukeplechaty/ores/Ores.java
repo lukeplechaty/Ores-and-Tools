@@ -15,7 +15,7 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.registry.GameRegistry;
-@Mod(modid="OAT",name="Ores and Tools",version="1.7.10-0.5.0")
+@Mod(modid="OAT",name="Ores and Tools",version="1.7.10-0.5.1")
 public class Ores
 {
 	GenOre genore = new GenOre();

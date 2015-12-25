@@ -33,15 +33,6 @@ public class Blockore extends Block
 	{
 		return Render.BlockOverlayRenderID;
 	}
-	public boolean canRenderInPass(int pass)
-	{
-		Render.OreBlockRenderPass = pass;
-		return true;
-	}
-	public int getRenderBlockPass()
-	{
-		return 1;
-	}
 	public IIcon getIcon(int side,int meta)
 	{
 		return textures[meta];

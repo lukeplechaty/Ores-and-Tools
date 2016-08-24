@@ -1,7 +1,7 @@
 [
 {
-  "modid": "ores",
-  "name": "Ores",
+  "modid": "oat",
+  "name": "Ores and Tools",
   "description": "",
   "version": "${version}",
   "mcversion": "${mcversion}",

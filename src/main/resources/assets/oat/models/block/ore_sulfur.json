@@ -1,0 +1,6 @@
+{
+    "parent": "block/stone",
+    "textures": {
+        "all": "oat:blocks/ore_sulfur"
+    }
+}

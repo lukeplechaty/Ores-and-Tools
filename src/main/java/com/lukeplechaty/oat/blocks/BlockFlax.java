@@ -131,7 +131,7 @@ public class BlockFlax extends BlockBush implements IGrowable
 	@Override
 	public List<ItemStack> getDrops(IBlockAccess world,BlockPos pos,IBlockState state,int fortune)
 	{
-		List<ItemStack> list=super.getDrops(world,pos,state,fortune);
+		List<ItemStack> list=new java.util.ArrayList<ItemStack>();
 		int meta=getAge(state);
 		Random rand=world instanceof World? ((World)world).rand:new Random();
 		for(int amount=0;amount<2+fortune;amount++)
@@ -166,7 +166,7 @@ public class BlockFlax extends BlockBush implements IGrowable
 	}
 	protected Item getSeed()
 	{
-		return setItems.seed;
+		return setItems.item_seed;
 	}
 	@Override
 	public IBlockState getStateFromMeta(int meta)

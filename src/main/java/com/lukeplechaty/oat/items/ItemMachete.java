@@ -1,32 +1,37 @@
 package com.lukeplechaty.oat.items;
-import com.lukeplechaty.oat.Ores;
+import com.lukeplechaty.oat.Oat;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 public class ItemMachete extends Item
 {
+	private float attackDamage;
 	private float toolPower;
 	public ItemMachete(String name,int damage,int mobdamage,float power)
 	{
 		super();
-		setCreativeTab(Ores.tabOres);
+		setCreativeTab(Oat.tabOres);
 		setUnlocalizedName("machete_"+name);
 		setRegistryName("machete_"+name);
 		maxStackSize=1;
 		setMaxDamage(damage);
 		toolPower=power;
+		attackDamage=mobdamage;
+		
 	}
+    public float getDamageVsEntity()
+    {
+        return attackDamage;
+    }
 	@Override
 	public float getStrVsBlock(ItemStack stack,IBlockState state)
 	{
-		if(Blocks.LEAVES==state||Blocks.LEAVES2==state) return toolPower;
+		if(state.getBlock() instanceof BlockLeaves) return toolPower;
 		return 1.0F;
 	}
 	@Override
@@ -48,18 +53,15 @@ public class ItemMachete extends Item
 				for(int newy=-size;newy<=size;newy++)
 				{
 					BlockPos pos2=pos.add(newX,newy,newZ);
-					Block blockID=obj.getBlockState(pos2).getBlock();
-					if(blockID==Blocks.AIR) continue;
-					Block list=blockID;
-					if(!(list instanceof BlockLeaves)) continue;
-					boolean newBlock=obj.setBlockToAir(pos2);
-					if(!newBlock) continue;
-					if(list.canHarvestBlock(world,pos,(EntityPlayer)entityLiving))
+					IBlockState sta=obj.getBlockState(pos2);
+					Block block=sta.getBlock();
+					if(block instanceof BlockLeaves)
 					{
-						list.harvestBlock(world,(EntityPlayer)entityLiving,pos,state,null,itemstack);
+						block.dropBlockAsItem(world,pos2,sta,0);
+						world.setBlockToAir(pos2);
 						itemstack.damageItem(1,entityLiving);
+						done=true;
 					}
-					done=true;
 				}
 			}
 		}

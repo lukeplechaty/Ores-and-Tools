@@ -1,0 +1,7 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "oat:items/lump_silver",
+		"layer1": "oat:items/lump_stone"
+	}
+}

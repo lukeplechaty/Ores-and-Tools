@@ -21,7 +21,7 @@ public class EntityClean extends EntityItem
 	public EntityClean(World world,EntityItem entity,ItemStack itemstack,Item returns)
 	{
 		super(world,entity.posX,entity.posY,entity.posZ,itemstack);
-		setDefaultPickupDelay();
+		setPickupDelay(20);
 		this.motionX=entity.motionX;
 		this.motionY=entity.motionY;
 		this.motionZ=entity.motionZ;
@@ -37,7 +37,6 @@ public class EntityClean extends EntityItem
 		if(block1==Blocks.WATER&&block2==Blocks.TRAPDOOR)
 		{
 			int size=this.getEntityItem().stackSize;
-			int meta=this.getEntityItem().getItemDamage();
 			this.setDead();
 			if(posY<prevPosY) posY-=1;
 			else
@@ -47,7 +46,7 @@ public class EntityClean extends EntityItem
 				if(posZ<prevPosZ) posZ-=.2;
 				if(posZ>prevPosZ) posZ+=.2;
 			}
-			EntityItem lump=new EntityItem(this.worldObj,this.posX,this.posY-0.6,this.posZ,new ItemStack(this.returns,size,meta));
+			EntityItem lump=new EntityItem(this.worldObj,this.posX,this.posY-0.6,this.posZ,new ItemStack(this.returns,size));
 			lump.motionX=this.motionX;
 			lump.motionY=this.motionY;
 			lump.motionZ=this.motionZ;
@@ -55,7 +54,7 @@ public class EntityClean extends EntityItem
 			for(int next=0;next<size;next++)
 				if(this.worldObj.rand.nextInt(3)==1)
 				{
-					EntityItem stone=new EntityItem(this.worldObj,this.posX,this.posY,this.posZ,new ItemStack(setItems.rock,1,4));
+					EntityItem stone=new EntityItem(this.worldObj,this.posX,this.posY,this.posZ,new ItemStack(setItems.item_rock));
 					stone.motionX=this.motionX;
 					stone.motionY=this.motionY;
 					stone.motionZ=this.motionZ;

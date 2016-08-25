@@ -1,8 +1,8 @@
 package com.lukeplechaty.oat.items;
 import java.util.List;
-import com.lukeplechaty.oat.Ores;
+import com.lukeplechaty.oat.Oat;
 import com.lukeplechaty.oat.control.ChislHandler;
-import com.lukeplechaty.oat.control.OresControl;
+import com.lukeplechaty.oat.control.Control;
 import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -31,14 +31,14 @@ public class ItemChisel extends Item
 	public ItemChisel(String name,int damage,int level)
 	{
 		super();
-		setCreativeTab(Ores.tabOres);
+		setCreativeTab(Oat.tabOres);
 		setUnlocalizedName("chisel_"+name);
 		setRegistryName("chisel_"+name);
 		maxStackSize=1;
 		setMaxDamage(damage);
 		this.level=level;
 	}
-	public EnumActionResult get(ItemStack itemstack,EntityPlayer entityplayer,World world,BlockPos pos,EnumFacing facing,ItemStack returnitem,ItemStack block,int level)
+	public EnumActionResult get(ItemStack itemstack,EntityPlayer entityplayer,World world,BlockPos pos,EnumFacing facing,ItemStack returnitem,Block block,int level)
 	{
 		double X=pos.getX()+0.5;
 		double Y=pos.getY()+0.5;
@@ -67,8 +67,8 @@ public class ItemChisel extends Item
 			world.spawnEntityInWorld(item);
 		}
 		itemstack.damageItem(1,entityplayer);
-		if(Block.getBlockFromItem(block.getItem())==Blocks.AIR) world.setBlockToAir(pos);
-		else world.setBlockState(pos,Block.getBlockFromItem(block.getItem()).getDefaultState(),3);
+		if(block==Blocks.AIR) world.setBlockToAir(pos);
+		else world.setBlockState(pos,block.getDefaultState(),3);
 		return EnumActionResult.SUCCESS;
 	}
 	public EnumActionResult list(ItemStack itemstack,EntityPlayer entityplayer,World world,BlockPos pos,EnumFacing facing)
@@ -78,33 +78,33 @@ public class ItemChisel extends Item
 			for(int id=0;id<worklist0.size();id++)
 			{
 				Object[] list=(Object[])worklist0.get(id);
-				if(OresControl.getOre((Block)list[0],(Integer)list[1],pos,world))
+				if(Control.getOre((Block)list[0],(Integer)list[1],pos,world))
 				{
-					return get(itemstack,entityplayer,world,pos,facing,(ItemStack)list[2],(ItemStack)list[3],((Integer)list[4]).intValue());
+					return get(itemstack,entityplayer,world,pos,facing,(ItemStack)list[2],(Block)list[3],((Integer)list[4]).intValue());
 				}
 			}
 			for(int id=0;id<worklist1.size();id++)
 			{
 				Object[] list=(Object[])worklist1.get(id);
-				if(OresControl.getOre((String)list[0],pos,world))
+				if(Control.getOre((String)list[0],pos,world))
 				{
-					return get(itemstack,entityplayer,world,pos,facing,OresControl.getOre((String)list[1],(Integer)list[2]),(ItemStack)list[3],((Integer)list[4]).intValue());
+					return get(itemstack,entityplayer,world,pos,facing,Control.getOre((String)list[1],(Integer)list[2]),(Block)list[3],((Integer)list[4]).intValue());
 				}
 			}
 			for(int id=0;id<worklist2.size();id++)
 			{
 				Object[] list=(Object[])worklist2.get(id);
-				if(OresControl.getOre((Block)list[0],(Integer)list[1],pos,world))
+				if(Control.getOre((Block)list[0],(Integer)list[1],pos,world))
 				{
-					return get(itemstack,entityplayer,world,pos,facing,OresControl.getOre((String)list[2],(Integer)list[3]),(ItemStack)list[4],((Integer)list[5]).intValue());
+					return get(itemstack,entityplayer,world,pos,facing,Control.getOre((String)list[2],(Integer)list[3]),(Block)list[4],((Integer)list[5]).intValue());
 				}
 			}
 			for(int id=0;id<worklist3.size();id++)
 			{
 				Object[] list=(Object[])worklist3.get(id);
-				if(OresControl.getOre((String)list[0],pos,world))
+				if(Control.getOre((String)list[0],pos,world))
 				{
-					return get(itemstack,entityplayer,world,pos,facing,(ItemStack)list[1],(ItemStack)list[2],((Integer)list[3]).intValue());
+					return get(itemstack,entityplayer,world,pos,facing,(ItemStack)list[1],(Block)list[2],((Integer)list[3]).intValue());
 				}
 			}
 		}

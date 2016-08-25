@@ -1,0 +1,7 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "oat:items/chunk_gold",
+		"layer1": "oat:items/chunk_stone"
+	}
+}

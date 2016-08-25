@@ -1,6 +1,32 @@
 {
-    "parent": "block/stone",
+    "parent": "block/block",
     "textures": {
-        "all": "oat:blocks/ore_sodium"
-    }
+    	"particle": "blocks/stone",
+        "stone": "blocks/stone",
+        "overlay": "oat:blocks/ore_sodium"
+    },
+    "elements": [
+        {   "from": [ 0, 0, 0 ],
+            "to": [ 16, 16, 16 ],
+            "faces": {
+                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#stone", "cullface": "down" },
+                "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#stone", "cullface": "up" },
+                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#stone", "cullface": "north" },
+                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#stone", "cullface": "south" },
+                "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#stone", "cullface": "west" },
+                "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#stone", "cullface": "east" }
+            }
+        },
+        {   "from": [ 0, 0, 0 ],
+            "to": [ 16, 16, 16 ],
+            "faces": {
+                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "cullface": "down" },
+                "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "cullface": "up" },
+                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "cullface": "north" },
+                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "cullface": "south" },
+                "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "cullface": "west" },
+                "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#overlay", "cullface": "east" }
+            }
+        }
+    ]
 }

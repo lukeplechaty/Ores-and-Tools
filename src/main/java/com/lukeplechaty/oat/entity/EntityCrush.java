@@ -22,7 +22,7 @@ public class EntityCrush extends EntityItem
 	public EntityCrush(World world,EntityItem entity,ItemStack itemstack,Item returns,int odds)
 	{
 		super(world,entity.posX,entity.posY,entity.posZ,itemstack);
-		setDefaultPickupDelay();
+		setPickupDelay(20);
 		this.motionX=entity.motionX;
 		this.motionY=entity.motionY;
 		this.motionZ=entity.motionZ;

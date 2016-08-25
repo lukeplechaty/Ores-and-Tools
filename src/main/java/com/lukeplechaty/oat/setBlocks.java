@@ -1,6 +1,6 @@
 package com.lukeplechaty.oat;
 import com.lukeplechaty.oat.blocks.BlockFlax;
-import com.lukeplechaty.oat.blocks.Blockore;
+import com.lukeplechaty.oat.blocks.BlockOres;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -16,9 +16,9 @@ public class setBlocks
 	public static void init()
 	{
 		crop=(new BlockFlax("flax_crop"));
-		orefossils=(new Blockore("ore_fossils").setHardness(6.0f));
-		oresodium=(new Blockore("ore_sodium").setHardness(3.0f));
-		oresulfur=(new Blockore("ore_sulfur").setHardness(5.0f));
+		orefossils=(new BlockOres("ore_fossils").setHardness(6.0f));
+		oresodium=(new BlockOres("ore_sodium").setHardness(3.0f));
+		oresulfur=(new BlockOres("ore_sulfur").setHardness(5.0f));
 	}
 	public static void register()
 	{
@@ -34,13 +34,13 @@ public class setBlocks
 	}
 	public static void registerRenders()
 	{
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(crop),0,new ModelResourceLocation("oat:"+crop.getUnlocalizedName(),"age"));
+		registerRenders(crop);
 		registerRenders(orefossils);
 		registerRenders(oresodium);
 		registerRenders(oresulfur);
 	}
 	private static void registerRenders(Block block)
 	{
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block),0,new ModelResourceLocation("oat:"+block.getUnlocalizedName(),"inventory"));
+		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block),0,new ModelResourceLocation(block.getRegistryName(),"inventory"));
 	}
 }

@@ -16,7 +16,7 @@ public class ChislHandler
 	 * A block in and itemstack out sensitive version of adding a chisl recipe.
 	 * @param
 	 */
-	public static void addtolist(Block in,int meta,ItemStack out,ItemStack left,int toollevel)
+	public static void addtolist(Block in,int meta,ItemStack out,Block left,int toollevel)
 	{
 		Object list=new Object[]{in,meta,out,left,toollevel};
 		worklist0.add(list);
@@ -25,7 +25,7 @@ public class ChislHandler
 	 * A block in and string out sensitive version of adding a chisl recipe.
 	 * @param
 	 */
-	public static void addtolist(Block in,int meta,String out,int stackSize,ItemStack left,int toollevel)
+	public static void addtolist(Block in,int meta,String out,int stackSize,Block left,int toollevel)
 	{
 		Object list=new Object[]{in,meta,out,stackSize,left,toollevel};
 		worklist2.add(list);
@@ -34,7 +34,7 @@ public class ChislHandler
 	 * A string in and itemstack out sensitive version of adding a chisl recipe.
 	 * @param
 	 */
-	public static void addtolist(String in,ItemStack out,ItemStack left,int toollevel)
+	public static void addtolist(String in,ItemStack out,Block left,int toollevel)
 	{
 		Object list=new Object[]{in,out,left,toollevel};
 		worklist3.add(list);
@@ -43,7 +43,7 @@ public class ChislHandler
 	 * A string in and string out sensitive version of adding a chisl recipe.
 	 * @param
 	 */
-	public static void addtolist(String in,String out,int stackSize,ItemStack left,int toollevel)
+	public static void addtolist(String in,String out,int stackSize,Block left,int toollevel)
 	{
 		Object list=new Object[]{in,out,stackSize,left,toollevel};
 		worklist1.add(list);

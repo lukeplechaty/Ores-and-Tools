@@ -79,23 +79,69 @@ public class Recipe
 		List<IRecipe> crafting=CraftingManager.getInstance().getRecipeList();
 		crafting.add(new ShapedOreRecipe(new ItemStack(Blocks.COBBLESTONE),new Object[]{"xx","xx",'x',"rock"}));
 		crafting.add(new ShapedOreRecipe(new ItemStack(Blocks.TORCH,4),new Object[]{"y","x",'x',"stickWood",'y',"chunkSulfur"}));
-		crafting.add(new ShapedOreRecipe(new ItemStack(setItems.mortar_and_pestle),new Object[]{" y ","xzx"," x ",'z',"cobblestone",'y',new ItemStack(setItems.item_handel),'x',"stone"}));
+		crafting.add(new ShapedOreRecipe(new ItemStack(setItems.mortar_and_pestle),new Object[]{" y ","xzx"," x ",'z',"cobblestone",'y',setItems.item_handel,'x',"stone"}));
 		crafting.add(new ShapedOreRecipe(new ItemStack(setItems.item_handel,2),new Object[]{"s s","lxl","s s",'s',Items.STRING,'l',Items.LEATHER,'x',Items.STICK}));
+		crafting.add(new ShapedOreRecipe(new ItemStack(setItems.item_dynamite,4),new Object[]{"dsd","pgp","pgp",'d',new ItemStack(Items.DYE,1,1),'s',Items.STRING,'p',Items.PAPER,'g',Items.GUNPOWDER}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(Items.GUNPOWDER,2),new Object[]{"dustCharcoal","dustSaltpeter","dustSaltpeter","dustSulfur"}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(Items.STRING,4),new Object[]{new ItemStack(Blocks.WOOL)}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.dust_flour),new Object[]{new ItemStack(setItems.mortar_and_pestle,1,all),Items.WHEAT}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.dust_sodium),new Object[]{new ItemStack(setItems.mortar_and_pestle,1,all),"chunkSaltpeter"}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.dust_sulfur),new Object[]{new ItemStack(setItems.mortar_and_pestle,1,all),"chunkSulfur"}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.dust_charcoal),new Object[]{new ItemStack(setItems.mortar_and_pestle,1,all),new ItemStack(Items.COAL,1,1)}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(Items.DYE,5,15),new Object[]{new ItemStack(setItems.mortar_and_pestle,1,all),Items.BONE}));
 		for(int MT=0;MT<ItemList[0].length;MT++)
 		{
 			Object obj=ItemList[0][MT];
 			for(int TL=0;TL<ItemList.length-1;TL++)
 			{
 				Item item=(Item)ItemList[TL+1][MT];
-				crafting.add(new ShapedOreRecipe(new ItemStack(item),new Object[]{patterns[TL],'x',new ItemStack(setItems.item_handel),'y',obj}));
+				crafting.add(new ShapedOreRecipe(new ItemStack(item),new Object[]{patterns[TL],'x',setItems.item_handel,'y',obj}));
 			}
 		}
-		crafting.add(new ShapelessOreRecipe(new ItemStack(Items.GUNPOWDER,2),new Object[]{"dustCharcoal","dustSaltpeter","dustSaltpeter","dustSulfur"}));
-		crafting.add(new ShapelessOreRecipe(new ItemStack(Items.STRING,4),new Object[]{new ItemStack(Blocks.WOOL)}));
-		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.dust_flour),new Object[]{new ItemStack(setItems.mortar_and_pestle,1,all),new ItemStack(Items.WHEAT)}));
-		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.dust_sodium),new Object[]{new ItemStack(setItems.mortar_and_pestle,1,all),"chunkSaltpeter"}));
-		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.dust_sulfur),new Object[]{new ItemStack(setItems.mortar_and_pestle,1,all),"chunkSulfur"}));
-		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.dust_charcoal),new Object[]{new ItemStack(setItems.mortar_and_pestle,1,all),new ItemStack(Items.COAL,1,1)}));
-		crafting.add(new ShapelessOreRecipe(new ItemStack(Items.DYE,5,15),new Object[]{new ItemStack(setItems.mortar_and_pestle,1,all),new ItemStack(Items.BONE)}));
+		grenade(crafting);
+	}
+	protected static void grenade(List<IRecipe> crafting)
+	{
+		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,1),new Object[]{setItems.item_dynamite,setItems.item_rock}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,2),new Object[]{setItems.item_dynamite,setItems.item_rock,setItems.item_rock}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,3),new Object[]{setItems.item_dynamite,setItems.item_rock,setItems.item_rock,setItems.item_rock}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,4),new Object[]{setItems.item_dynamite,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,5),new Object[]{setItems.item_dynamite,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,6),new Object[]{setItems.item_dynamite,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,7),new Object[]{setItems.item_dynamite,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock}));
+		crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,8),new Object[]{setItems.item_dynamite,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock}));
+
+		for(int meta=1;meta<30;meta++)
+		{
+			crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,meta+1),new Object[]{new ItemStack(setItems.item_grenade,1,meta),setItems.item_rock}));
+		}
+		for(int meta=1;meta<29;meta++)
+		{
+			crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,meta+2),new Object[]{new ItemStack(setItems.item_grenade,1,meta),setItems.item_rock,setItems.item_rock}));
+		}
+		for(int meta=1;meta<28;meta++)
+		{
+			crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,meta+3),new Object[]{new ItemStack(setItems.item_grenade,1,meta),setItems.item_rock,setItems.item_rock,setItems.item_rock}));
+		}
+		for(int meta=1;meta<27;meta++)
+		{
+			crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,meta+4),new Object[]{new ItemStack(setItems.item_grenade,1,meta),setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock}));
+		}
+		for(int meta=1;meta<26;meta++)
+		{
+			crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,meta+5),new Object[]{new ItemStack(setItems.item_grenade,1,meta),setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock}));
+		}
+		for(int meta=1;meta<25;meta++)
+		{
+			crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,meta+6),new Object[]{new ItemStack(setItems.item_grenade,1,meta),setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock}));
+		}
+		for(int meta=1;meta<24;meta++)
+		{
+			crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,meta+7),new Object[]{new ItemStack(setItems.item_grenade,1,meta),setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock}));
+		}
+		for(int meta=1;meta<23;meta++)
+		{
+			crafting.add(new ShapelessOreRecipe(new ItemStack(setItems.item_grenade,1,meta+8),new Object[]{new ItemStack(setItems.item_grenade,1,meta),setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock,setItems.item_rock}));
+		}
 	}
 }

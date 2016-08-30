@@ -35,6 +35,8 @@ public class Oat
 		setItems.register();
 		setBlocks.init();
 		setBlocks.register();
+		setEntites.init();
+		setEntites.register();
 		proxy.init();
 		RegisterOreDictionary.register();
 		MinecraftForge.addGrassSeed(new ItemStack(setItems.item_seed),7);

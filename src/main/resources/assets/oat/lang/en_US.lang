@@ -9,6 +9,8 @@ item.item_sodium.name=Saltpeter
 item.item_sulfur.name=Sulfur
 item.item_handel.name=Handel
 item.item_rock.name=Rock
+item.item_dynamite.name=Dynamite
+item.item_grenade.name=Grenade
 
 item.chunk_iron.name=Iron Chunk
 item.chunk_gold.name=Gold Chunk

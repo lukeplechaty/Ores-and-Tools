@@ -21,6 +21,8 @@ public class setItems
 	public static Item item_sulfur;
 	public static Item item_handel;
 	public static Item item_rock;
+	public static Item item_dynamite;
+	public static Item item_grenade;
 	public static Item gem_certus_quartz;
 	public static Item gem_sapphire;
 	public static Item gem_ruby;
@@ -159,6 +161,8 @@ public class setItems
 		item_sulfur=(new Items("item_sulfur"));
 		item_handel=(new Items("item_handel"));
 		item_rock=(new Items("item_rock"));
+		item_dynamite=(new Items("item_dynamite"));
+		item_grenade=(new Items("item_grenade").setMaxDamage(30));
 		gem_certus_quartz=(new Items("gem_certus_quartz"));
 		gem_sapphire=(new Items("gem_sapphire"));
 		gem_ruby=(new Items("gem_ruby"));
@@ -278,6 +282,8 @@ public class setItems
 		GameRegistry.register(item_sulfur);
 		GameRegistry.register(item_handel);
 		GameRegistry.register(item_rock);
+		GameRegistry.register(item_dynamite);
+		GameRegistry.register(item_grenade);
 		GameRegistry.register(gem_certus_quartz);
 		GameRegistry.register(gem_sapphire);
 		GameRegistry.register(gem_ruby);
@@ -397,6 +403,8 @@ public class setItems
 		registerRenders(item_sulfur);
 		registerRenders(item_handel);
 		registerRenders(item_rock);
+		registerRenders(item_dynamite);
+		registerRenders(item_grenade);
 		registerRenders(gem_certus_quartz);
 		registerRenders(gem_sapphire);
 		registerRenders(gem_ruby);

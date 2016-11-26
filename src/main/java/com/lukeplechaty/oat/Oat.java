@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-@Mod(modid="oat",name="Ores and Tools",version="1.10.2-0.6.0")
+@Mod(modid="oat",name="Ores and Tools",version="1.10.2-0.7.1")
 public class Oat
 {
 	@Instance

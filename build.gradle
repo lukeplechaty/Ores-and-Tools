@@ -12,12 +12,12 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "1.10.2-0.6.0"
+version = "1.10.2-0.7.1"
 group= "com.lukeplechaty.oat"
 archivesBaseName = "Ores and Tools"
 
 minecraft {
-    version = "1.10.2-12.18.1.2068"
+    version = "1.10.2-12.18.1.2075"
     runDir = "run"
     mappings = "snapshot_20160518"
 }

@@ -87,6 +87,7 @@ public class RegisterOreDictionary
 		Control.addOre("ingotCobalt",new ItemStack(setItems.ingot_cobalt));
 		Control.addOre("ingotArdite",new ItemStack(setItems.ingot_ardite));
 		Control.addOre("ingotYellorium",new ItemStack(setItems.ingot_yellorium));
+		Control.addOre("ingotUranium",new ItemStack(setItems.ingot_yellorium));
 		Control.addOre("crystalCertusQuartz",new ItemStack(setItems.gem_certus_quartz));
 		Control.addOre("gemSapphire",new ItemStack(setItems.gem_sapphire));
 		Control.addOre("gemRuby",new ItemStack(setItems.gem_ruby));

@@ -1,16 +1,49 @@
 This mapping 'snapshot_20160518' was designed for MC 1.9.4! Use at your own peril.This mapping 'snapshot_20160518' was designed for MC 1.9.4! Use at your own peril.
 
-:cleanCache FAILED
+#################################################
+         ForgeGradle 2.2-SNAPSHOT-c438b06        
+  https://github.com/MinecraftForge/ForgeGradle  
+#################################################
+               Powered by MCP unknown               
+             http://modcoderpack.com             
+         by: Searge, ProfMobius, Fesh0r,         
+         R4wk, ZeuX, IngisKahn, bspkrs           
+#################################################
+:deobfCompileDummyTask
+:deobfProvidedDummyTask
+:sourceApiJava UP-TO-DATE
+:compileApiJava UP-TO-DATE
+:processApiResources UP-TO-DATE
+:apiClasses UP-TO-DATE
+:sourceMainJava
+:compileJavawarning: [options] bootstrap class path not set in conjunction with -source 1.6
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+1 warning
 
-FAILURE: Build failed with an exception.
+:processResources
+:classes
+:jar
+:sourceTestJava UP-TO-DATE
+:compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:extractMcpData SKIPPED
+:extractMcpMappings SKIPPED
+:getVersionJson
+:extractUserdev UP-TO-DATE
+:genSrgs SKIPPED
+:reobfJar
+:extractRangemapReplacedMain
+D:\workspace\OAT\build\sources\main\java
+:retromapReplacedMain
+remapping source...
+:sourceJar
+:assemble
+:check UP-TO-DATE
+:build
 
-* What went wrong:
-Execution failed for task ':cleanCache'.
-> Unable to delete file: C:\Users\Luke\.gradle\caches\minecraft\net\minecraftforge\forge\1.10.2-12.18.1.2068\snapshot\20160518\forgeSrc-1.10.2-12.18.1.2068.jar
+BUILD SUCCESSFUL
 
-* Try:
-Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
-
-BUILD FAILED
-
-Total time: 1.808 secs
+Total time: 38.978 secs

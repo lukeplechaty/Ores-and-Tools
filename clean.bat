@@ -1,1 +1,1 @@
-D:\gradle\bin\gradle cleanCache
+E:\gradle\bin\gradle cleanCache

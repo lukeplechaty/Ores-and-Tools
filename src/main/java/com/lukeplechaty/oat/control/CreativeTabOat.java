@@ -1,16 +1,24 @@
 package com.lukeplechaty.oat.control;
-import com.lukeplechaty.oat.setItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+
 public final class CreativeTabOat extends CreativeTabs
 {
-	public CreativeTabOat()
+	Item item;
+	public CreativeTabOat(String name)
 	{
-		super("oat");
+		super(name);
 	}
-	@Override
-	public Item getTabIconItem()
+	
+	public void setItem(Item item)
 	{
-		return setItems.chisel_gold;
+		this.item = item;
+	}
+	
+	@Override
+	public ItemStack getTabIconItem()
+	{
+		return new ItemStack(item);
 	}
 }

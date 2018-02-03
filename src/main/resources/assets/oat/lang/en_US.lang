@@ -1,4 +1,6 @@
-itemGroup.oat=Ores and Tools
+itemGroup.ores=Ores and Tools Ores
+itemGroup.items=Ores and Tools Items
+itemGroup.tools=Ores and Tools Tools
 
 tile.ore_fossils.name=Fossils Ore
 tile.ore_sodium.name=Saltpeter Ore
